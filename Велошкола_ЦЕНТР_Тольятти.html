@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Велошкола ЦЕНТР Тольятти | Научим кататься за 1 урок</title>
+
+  <!-- Google Fonts: Inter & Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,700;0,800;0,900;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandWhite: '#ffffff',
+            brandGray: '#f8fafc',
+            brandSlate: '#f1f5f9',
+            brandDark: '#090d16',
+            brandBorder: '#e2e8f0',
+            neonPink: '#ff007a',
+            neonPinkHover: '#e6006e',
+            neonGreen: '#00e65b',
+            neonGreenHover: '#00c74e',
+            neonGreenSoft: '#eafff2',
+            vkBlue: '#0077ff'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Montserrat', 'Arial Black', 'sans-serif']
+          },
+          boxShadow: {
+            pinkGlow: '0 12px 30px -4px rgba(255, 0, 122, 0.38)',
+            greenGlow: '0 12px 30px -4px rgba(0, 230, 91, 0.38)',
+            cardHover: '0 25px 45px -12px rgba(15, 23, 42, 0.12)',
+            deepCard: '0 10px 25px -5px rgba(0, 0, 0, 0.05)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Ultra-clean micro-dot backdrop */
+    .clean-grid {
+      background-image: radial-gradient(rgba(15, 23, 42, 0.07) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    /* Scroll Cascade Animations */
+    .reveal-elem {
+      opacity: 0;
+      transform: translateY(40px) scale(0.97);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), 
+                  transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal-elem.revealed {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* Floating Keyframes for Equipment */
+    @keyframes floatLevitate {
+      0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-16px) rotate(2deg);
+      }
+    }
+    @keyframes pulseRing {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.08); opacity: 0.3; }
+      100% { transform: scale(0.95); opacity: 0.8; }
+    }
+    @keyframes sheenSweep {
+      0% { transform: translateX(-100%) rotate(45deg); }
+      100% { transform: translateX(200%) rotate(45deg); }
+    }
+
+    .animate-float-helmet {
+      animation: floatLevitate 5s ease-in-out infinite;
+    }
+    .animate-float-bike {
+      animation: floatLevitate 6s ease-in-out 1.2s infinite;
+    }
+    .animate-pulse-ring {
+      animation: pulseRing 3.5s ease-in-out infinite;
+    }
+
+    /* 3D Tilt perspective wrapper */
+    .tilt-card {
+      transform-style: preserve-3d;
+      perspective: 1000px;
+      transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    }
+    .tilt-inner {
+      transform: translateZ(30px);
+    }
+  </style>
+</head>
+<body class="bg-brandWhite text-brandDark font-sans antialiased overflow-x-hidden selection:bg-neonPink selection:text-white">
+
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-brandBorder shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
+      
+      <!-- Authentic Logo (1:1 with brand identity) -->
+      <a href="#" class="flex items-center group py-2" title="Велошкола ЦЕНТР Тольятти">
+        <div class="w-40 sm:w-48 h-auto flex items-center">
+          <svg viewBox="0 0 420 180" class="w-full h-auto transition-transform group-hover:scale-105 duration-300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="brand-logo-main">
+              <!-- Left Skate Vert Ramp -->
+              <path d="M 12 60 L 26 60 L 26 95 C 34 135 72 162 110 162 L 12 162 Z" fill="#000000"/>
+              <!-- Right Skate Vert Ramp -->
+              <path d="M 408 60 L 394 60 L 394 95 C 386 135 348 162 310 162 L 408 162 Z" fill="#000000"/>
+              <!-- Slanted Bold Word: ЦЕНТР -->
+              <text x="204" y="112" text-anchor="middle" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="64" font-style="italic" fill="#000000" letter-spacing="1.5">ЦЕНТР</text>
+              <!-- Neon Pink Period Dot -->
+              <circle cx="330" cy="102" r="11" fill="#ff007a"/>
+              <!-- Lower Subtitle: велошкола -->
+              <text x="210" y="148" text-anchor="middle" font-family="'Inter', 'Arial', sans-serif" font-weight="600" font-size="25" font-style="italic" fill="#000000" letter-spacing="1">велошкола</text>
+            </g>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Navigation links -->
+      <nav class="hidden lg:flex items-center gap-7 text-xs uppercase tracking-wider font-extrabold text-slate-700">
+        <a href="#offer" class="hover:text-neonPink transition-colors">О школе</a>
+        <a href="#coaches" class="hover:text-neonGreen transition-colors">Тренеры</a>
+        <a href="#prices" class="hover:text-neonPink transition-colors">Цены</a>
+        <a href="#schedule" class="hover:text-neonGreen transition-colors">Расписание</a>
+        <a href="#shop" class="hover:text-neonPink transition-colors">Экипировка</a>
+        <a href="#contacts" class="hover:text-slate-900 transition-colors">Контакты</a>
+      </nav>
+
+      <!-- Action buttons & Contact -->
+      <div class="flex items-center gap-3 sm:gap-5">
+        <div class="hidden md:flex flex-col text-right">
+          <a href="tel:89370609029" class="font-extrabold text-sm text-slate-900 hover:text-neonPink transition-colors tracking-tight">
+            8 (937) 060-90-29
+          </a>
+          <span class="text-[11px] text-slate-500 font-medium">Тольятти, Южное шоссе, 5</span>
+        </div>
+
+        <button onclick="openBookingModal('Шапка: Пробное занятие 0 ₽')" class="relative overflow-hidden px-5 py-2.5 sm:px-6 sm:py-3 rounded-full font-black text-xs uppercase tracking-wider bg-neonPink text-white shadow-pinkGlow hover:bg-neonPinkHover hover:scale-105 active:scale-95 transition-all">
+          <span class="relative z-10 flex items-center gap-1.5">
+            <span>Пробное 0 ₽</span>
+            <span class="text-xs">⚡</span>
+          </span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <section id="offer" class="relative bg-brandWhite clean-grid border-b border-brandBorder pt-14 sm:pt-20 pb-20 sm:pb-28 overflow-hidden">
+    <!-- Glowing background elements -->
+    <div class="absolute top-1/4 -left-20 w-96 h-96 bg-neonPink/10 rounded-full blur-3xl pointer-events-none animate-pulse-ring"></div>
+    <div class="absolute bottom-10 -right-20 w-96 h-96 bg-neonGreen/15 rounded-full blur-3xl pointer-events-none animate-pulse-ring" style="animation-delay: 1.5s;"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      
+      <!-- Live City Badge -->
+      <div class="reveal-elem inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-brandBorder shadow-sm mb-6">
+        <span class="relative flex h-2.5 w-2.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-neonGreen opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-neonGreen"></span>
+        </span>
+        <span class="font-extrabold text-xs uppercase tracking-wider text-slate-900">
+          Тольятти, Южное шоссе, 5 • Крытый круглогодичный скейт-парк
+        </span>
+      </div>
+
+      <!-- Main Catchy Offer Headline -->
+      <h1 class="reveal-elem reveal-delay-1 font-black text-3xl sm:text-5xl lg:text-6xl text-slate-900 uppercase tracking-tight leading-[1.12] mb-6">
+        Научим кататься на велосипеде <br class="hidden sm:inline">
+        <span class="text-neonPink relative inline-block">
+          за одно занятие.
+          <span class="absolute -bottom-1 left-0 w-full h-1.5 bg-neonPink/30 rounded-full"></span>
+        </span> <br>
+        <span class="bg-gradient-to-r from-neonGreen to-emerald-500 bg-clip-text text-transparent underline decoration-neonGreen decoration-4 underline-offset-8">
+          Первая тренировка — БЕСПЛАТНО!
+        </span>
+      </h1>
+
+      <!-- Detailed Selling Subtitle -->
+      <p class="reveal-elem reveal-delay-2 max-w-2xl mx-auto text-base sm:text-lg text-slate-600 font-normal leading-relaxed mb-10">
+        Учим держать баланс и крутить педали без боковых колесиков и слез за 60 минут. Направления для детей и взрослых: беговел, велосипед, трюковой BMX, трюковой самокат, скейтборд и ролики.
+      </p>
+
+      <!-- Primary Action Buttons (VK Lead Capture + Quick Call) -->
+      <div class="reveal-elem reveal-delay-3 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-lg mx-auto mb-16">
+        <button onclick="openBookingModal('Главный экран: Запись на 0 ₽')" class="w-full sm:w-auto px-8 py-4 rounded-full font-black text-xs uppercase tracking-wider bg-neonPink text-white shadow-pinkGlow hover:bg-neonPinkHover hover:scale-105 active:scale-95 transition-all text-center">
+          Записаться на бесплатный урок
+        </button>
+        
+        <a href="https://vk.me/centrschool63" target="_blank" class="w-full sm:w-auto px-6 py-4 rounded-full font-bold text-xs uppercase tracking-wider bg-vkBlue text-white hover:bg-blue-600 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2 shadow-sm">
+          <span>💬</span> Записаться через ВКонтакте
+        </a>
+      </div>
+
+      <!-- Live Benefit Floating Cards -->
+      <div class="reveal-elem reveal-delay-4 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+        <div class="tilt-card bg-white p-6 rounded-3xl border border-brandBorder shadow-deepCard hover:border-neonPink transition-all">
+          <div class="tilt-inner">
+            <div class="font-black text-3xl text-neonPink">60 мин</div>
+            <div class="text-xs text-slate-600 font-semibold mt-1">Ребенок едет сам</div>
+          </div>
+        </div>
+        <div class="tilt-card bg-white p-6 rounded-3xl border border-brandBorder shadow-deepCard hover:border-neonGreen transition-all">
+          <div class="tilt-inner">
+            <div class="font-black text-3xl text-emerald-600">0 ₽</div>
+            <div class="text-xs text-slate-600 font-semibold mt-1">Пробная тренировка</div>
+          </div>
+        </div>
+        <div class="tilt-card bg-white p-6 rounded-3xl border border-brandBorder shadow-deepCard hover:border-neonPink transition-all">
+          <div class="tilt-inner">
+            <div class="font-black text-3xl text-slate-900">от 3 лет</div>
+            <div class="text-xs text-slate-600 font-semibold mt-1">Для детей и взрослых</div>
+          </div>
+        </div>
+        <div class="tilt-card bg-white p-6 rounded-3xl border border-brandBorder shadow-deepCard hover:border-neonGreen transition-all">
+          <div class="tilt-inner">
+            <div class="font-black text-3xl text-slate-900">100%</div>
+            <div class="text-xs text-slate-600 font-semibold mt-1">Шлем и экип бесплатно</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="coaches" class="py-20 bg-brandWhite border-b border-brandBorder">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="reveal-elem text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-black uppercase tracking-widest text-emerald-600 block mb-2">Команда наставников</span>
+        <h2 class="text-3xl sm:text-4xl font-black uppercase text-slate-900 mb-3">
+          Тренеры школы «ЦЕНТР»
+        </h2>
+        <p class="text-slate-500 text-sm">
+          Действующие райдеры и сертифицированные инструкторы, которые находят общий язык с каждым ребенком.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Coach 1: Dmitry -->
+        <div class="reveal-elem reveal-delay-1 tilt-card bg-white rounded-3xl p-7 border border-brandBorder shadow-deepCard hover:border-neonPink hover:shadow-cardHover transition-all flex flex-col justify-between group">
+          <div>
+            <!-- Coach Avatar Showcase -->
+            <div class="relative w-full h-56 rounded-2xl bg-gradient-to-tr from-slate-900 to-slate-800 flex items-center justify-center overflow-hidden mb-6 border border-slate-200">
+              <div class="absolute inset-0 bg-neonPink/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <!-- Graphic silhouette illustration -->
+              <svg class="w-28 h-28 text-white group-hover:scale-110 transition-transform duration-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <circle cx="12" cy="7" r="4"></circle>
+                <path d="M5.5 21v-2a6.5 6.5 0 0 1 13 0v2"></path>
+              </svg>
+              <div class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-black/80 backdrop-blur-sm text-neonPink font-extrabold text-[11px] uppercase tracking-wider">
+                BMX • Самокат • Скейт
+              </div>
+            </div>
+
+            <h3 class="font-black text-2xl text-slate-900 mb-1">Тренер Дмитрий</h3>
+            <p class="text-xs text-neonPink font-bold uppercase tracking-wider mb-4">Старший тренер по экстрим-направлениям</p>
+            
+            <p class="text-xs text-slate-600 leading-relaxed mb-6">
+              Специализируется на секциях BMX, прыжках в рампе, базовых трюках на самокате и скейте. Учит контролировать байк в воздухе и грамотно группироваться при падениях.
+            </p>
+
+            <div class="space-y-2 text-xs mb-6">
+              <div class="flex items-center gap-2 text-slate-700">
+                <span class="text-neonGreen font-bold">✓</span>
+                <span>Ведет группы: <b>Пн, Ср, Пт (16:30), Вт, Чт (18:30)</b></span>
+              </div>
+              <div class="flex items-center gap-2 text-slate-700">
+                <span class="text-neonGreen font-bold">✓</span>
+                <span>Подготовка к выездам на контесты</span>
+              </div>
+            </div>
+          </div>
+
+          <button onclick="openBookingModal('Тренер: Дмитрий (BMX и самокат)')" class="w-full py-3 rounded-xl bg-slate-900 text-white hover:bg-neonPink hover:shadow-pinkGlow font-bold text-xs uppercase tracking-wider transition-all">
+            Записаться к Дмитрию
+          </button>
+        </div>
+
+        <!-- Coach 2: Alexander -->
+        <div class="reveal-elem reveal-delay-2 tilt-card bg-white rounded-3xl p-7 border border-brandBorder shadow-deepCard hover:border-neonGreen hover:shadow-cardHover transition-all flex flex-col justify-between group">
+          <div>
+            <!-- Coach Avatar Showcase -->
+            <div class="relative w-full h-56 rounded-2xl bg-gradient-to-tr from-slate-900 to-slate-800 flex items-center justify-center overflow-hidden mb-6 border border-slate-200">
+              <div class="absolute inset-0 bg-neonGreen/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <svg class="w-28 h-28 text-white group-hover:scale-110 transition-transform duration-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <circle cx="12" cy="7" r="4"></circle>
+                <path d="M5.5 21v-2a6.5 6.5 0 0 1 13 0v2"></path>
+              </svg>
+              <div class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-black/80 backdrop-blur-sm text-neonGreen font-extrabold text-[11px] uppercase tracking-wider">
+                Велосипед • Ролики • Беговел
+              </div>
+            </div>
+
+            <h3 class="font-black text-2xl text-slate-900 mb-1">Тренер Александр</h3>
+            <p class="text-xs text-emerald-600 font-bold uppercase tracking-wider mb-4">Мастер постановки баланса с нуля</p>
+            
+            <p class="text-xs text-slate-600 leading-relaxed mb-6">
+              Автор ускоренной методики «Поехали за 60 минут». Обучает правильной посадке, уверенному торможению и плавным маневрам на роликах и двухколесных велосипедах.
+            </p>
+
+            <div class="space-y-2 text-xs mb-6">
+              <div class="flex items-center gap-2 text-slate-700">
+                <span class="text-neonPink font-bold">✓</span>
+                <span>Ведет группы: <b>Пн, Ср, Пт (17:30 – 20:30)</b></span>
+              </div>
+              <div class="flex items-center gap-2 text-slate-700">
+                <span class="text-neonPink font-bold">✓</span>
+                <span>Терпеливый подход даже к самым пугливым ученикам</span>
+              </div>
+            </div>
+          </div>
+
+          <button onclick="openBookingModal('Тренер: Александр (Велосипед и ролики)')" class="w-full py-3 rounded-xl bg-slate-900 text-white hover:bg-neonGreen hover:text-black hover:shadow-greenGlow font-bold text-xs uppercase tracking-wider transition-all">
+            Записаться к Александру
+          </button>
+        </div>
+
+        <!-- Coach 3: Denis -->
+        <div class="reveal-elem reveal-delay-3 tilt-card bg-white rounded-3xl p-7 border border-brandBorder shadow-deepCard hover:border-slate-800 hover:shadow-cardHover transition-all flex flex-col justify-between group">
+          <div>
+            <!-- Coach Avatar Showcase -->
+            <div class="relative w-full h-56 rounded-2xl bg-gradient-to-tr from-slate-900 to-slate-800 flex items-center justify-center overflow-hidden mb-6 border border-slate-200">
+              <div class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <svg class="w-28 h-28 text-white group-hover:scale-110 transition-transform duration-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <circle cx="12" cy="7" r="4"></circle>
+                <path d="M5.5 21v-2a6.5 6.5 0 0 1 13 0v2"></path>
+              </svg>
+              <div class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-black/80 backdrop-blur-sm text-white font-extrabold text-[11px] uppercase tracking-wider">
+                Беговел • Велосипед • Суббота
+              </div>
+            </div>
+
+            <h3 class="font-black text-2xl text-slate-900 mb-1">Тренер Денис</h3>
+            <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mb-4">Инструктор младших групп и выходных дней</p>
+            
+            <p class="text-xs text-slate-600 leading-relaxed mb-6">
+              Игровая форма тренировок для малышей от 3 лет. Развивает вестибулярный аппарат, координацию и любовь к спорту с раннего возраста.
+            </p>
+
+            <div class="space-y-2 text-xs mb-6">
+              <div class="flex items-center gap-2 text-slate-700">
+                <span class="text-neonGreen font-bold">✓</span>
+                <span>Ведет группы: <b>Вт, Чт (16:30 – 18:30) и Суббота</b></span>
+              </div>
+              <div class="flex items-center gap-2 text-slate-700">
+                <span class="text-neonGreen font-bold">✓</span>
+                <span>Индивидуальные занятия по предварительной записи</span>
+              </div>
+            </div>
+          </div>
+
+          <button onclick="openBookingModal('Тренер: Денис (Беговел и велосипед)')" class="w-full py-3 rounded-xl bg-slate-900 text-white hover:bg-slate-800 font-bold text-xs uppercase tracking-wider transition-all">
+            Записаться к Денису
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="shop" class="py-20 bg-brandGray border-b border-brandBorder relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="reveal-elem text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-black uppercase tracking-widest text-neonPink block mb-2">Фирменная экипировка</span>
+        <h2 class="text-3xl sm:text-4xl font-black uppercase text-slate-900 mb-3">
+          Шлемы и байки в наличии
+        </h2>
+        <p class="text-slate-500 text-sm">
+          Защита и профессиональные велосипеды, проверенные тренерами в реальных тренировках.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        
+        <!-- Product 1: Helmet Tech Team Full-Face -->
+        <div class="reveal-elem reveal-delay-1 tilt-card bg-white rounded-3xl p-8 border border-brandBorder shadow-deepCard hover:border-neonPink hover:shadow-cardHover transition-all flex flex-col justify-between relative overflow-hidden">
+          
+          <div class="relative z-10">
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3.5 py-1 rounded-full text-[11px] font-bold uppercase bg-neonPink/10 text-neonPink border border-neonPink/20">
+                Полная защита лица и челюсти
+              </span>
+              <span class="text-3xl font-black text-slate-900">6 000 ₽</span>
+            </div>
+
+            <!-- Floating 3D Helmet Stage -->
+            <div class="relative h-64 rounded-2xl bg-gradient-to-b from-brandSlate to-white flex items-center justify-center mb-6 border border-brandBorder overflow-hidden">
+              <div class="absolute w-44 h-44 bg-neonPink/15 rounded-full blur-2xl animate-pulse-ring"></div>
+              
+              <!-- Floating Icon/Model Container -->
+              <div class="animate-float-helmet relative flex flex-col items-center">
+                <svg class="w-28 h-28 text-neonPink filter drop-shadow-[0_10px_20px_rgba(255,0,122,0.4)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M12 2a9 9 0 0 0-9 9c0 4.14 2.8 7.63 6.67 8.68L10 22h4l.33-2.32C18.2 18.63 21 15.14 21 11a9 9 0 0 0-9-9z"></path>
+                  <path d="M6 11h12"></path>
+                  <path d="M8 15h8"></path>
+                </svg>
+                <div class="w-20 h-2 bg-slate-300/60 rounded-full blur-sm mt-4"></div>
+              </div>
+
+              <!-- Floating Spec Badges -->
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-white/90 border border-slate-200 text-[10px] font-bold text-slate-800 shadow-sm">
+                Сертификация EN 1078
+              </div>
+              <div class="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-white/90 border border-slate-200 text-[10px] font-bold text-emerald-600 shadow-sm">
+                В наличии на Южном ш., 5
+              </div>
+            </div>
+
+            <h3 class="font-black text-2xl text-slate-900 mb-2">Шлем Tech Team Full-Face (Интеграл)</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-6">
+              Монолитный шлем с усиленной подбородочной дугой. Предотвращает травмы лица при разучивании прыжков и трюков на BMX и трюковом самокате.
+            </p>
+
+            <div class="grid grid-cols-2 gap-3 text-xs mb-8">
+              <div class="p-3 bg-brandGray rounded-xl border border-brandBorder">
+                <span class="text-slate-400 block text-[10px] uppercase font-bold">Размеры:</span>
+                <span class="font-bold text-slate-900">S (50-54) и M (54-58)</span>
+              </div>
+              <div class="p-3 bg-brandGray rounded-xl border border-brandBorder">
+                <span class="text-slate-400 block text-[10px] uppercase font-bold">Примерка:</span>
+                <span class="font-bold text-neonPink">Бесплатно перед покупкой</span>
+              </div>
+            </div>
+          </div>
+
+          <button onclick="openBookingModal('Купить/Забронировать: Шлем Tech Team (6 000 ₽)')" class="w-full py-4 rounded-xl bg-neonPink text-white font-black text-xs uppercase tracking-wider shadow-pinkGlow hover:bg-neonPinkHover hover:scale-102 active:scale-95 transition-all">
+            Забронировать шлем за 6 000 ₽
+          </button>
+        </div>
+
+        <!-- Product 2: BMX Bikes VЁRT -->
+        <div class="reveal-elem reveal-delay-2 tilt-card bg-white rounded-3xl p-8 border border-brandBorder shadow-deepCard hover:border-neonGreen hover:shadow-cardHover transition-all flex flex-col justify-between relative overflow-hidden">
+          
+          <div class="relative z-10">
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3.5 py-1 rounded-full text-[11px] font-bold uppercase bg-emerald-50 text-emerald-800 border border-emerald-200">
+                Официальные байки школы
+              </span>
+              <span class="text-3xl font-black text-slate-900">от 30 000 ₽</span>
+            </div>
+
+            <!-- Floating 3D Bike Stage -->
+            <div class="relative h-64 rounded-2xl bg-gradient-to-b from-brandSlate to-white flex items-center justify-center mb-6 border border-brandBorder overflow-hidden">
+              <div class="absolute w-44 h-44 bg-neonGreen/15 rounded-full blur-2xl animate-pulse-ring" style="animation-delay: 1.2s;"></div>
+              
+              <!-- Floating Bike Container -->
+              <div class="animate-float-bike relative flex flex-col items-center">
+                <svg class="w-32 h-32 text-emerald-600 filter drop-shadow-[0_10px_20px_rgba(0,230,91,0.4)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <circle cx="5.5" cy="17.5" r="3.5"></circle>
+                  <circle cx="18.5" cy="17.5" r="3.5"></circle>
+                  <path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-3 11.5L8 10h4l3 4.5"></path>
+                  <path d="M5.5 17.5 12 14l4.5 3.5"></path>
+                  <path d="M12 14V9l2-3"></path>
+                </svg>
+                <div class="w-24 h-2 bg-slate-300/60 rounded-full blur-sm mt-4"></div>
+              </div>
+
+              <!-- Badges -->
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-white/90 border border-slate-200 text-[10px] font-bold text-slate-800 shadow-sm">
+                Закрытые промподшипники
+              </div>
+              <div class="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-white/90 border border-slate-200 text-[10px] font-bold text-emerald-600 shadow-sm">
+                Сборка и тест-драйв 0 ₽
+              </div>
+            </div>
+
+            <h3 class="font-black text-2xl text-slate-900 mb-2">BMX Велосипеды VЁRT (Street & Park)</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-6">
+              Трюковые велосипеды с правильной геометрией. Надежная каретка Mid, закрытые втулки и прочные двойные обода, готовые к нагрузкам в скейт-парке.
+            </p>
+
+            <div class="grid grid-cols-2 gap-3 text-xs mb-8">
+              <div class="p-3 bg-brandGray rounded-xl border border-brandBorder">
+                <span class="text-slate-400 block text-[10px] uppercase font-bold">Колеса:</span>
+                <span class="font-bold text-slate-900">18" и 20" дюймов</span>
+              </div>
+              <div class="p-3 bg-brandGray rounded-xl border border-brandBorder">
+                <span class="text-slate-400 block text-[10px] uppercase font-bold">Подарок школы:</span>
+                <span class="font-bold text-emerald-600">Настройка под рост</span>
+              </div>
+            </div>
+          </div>
+
+          <button onclick="openBookingModal('Купить/Забронировать: BMX VЁRT (от 30 000 ₽)')" class="w-full py-4 rounded-xl bg-slate-900 hover:bg-neonGreen hover:text-black text-white font-black text-xs uppercase tracking-wider shadow-greenGlow hover:scale-102 active:scale-95 transition-all">
+            Выбрать байк VЁRT от 30 000 ₽
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="prices" class="py-20 bg-brandWhite border-b border-brandBorder">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="reveal-elem text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-black uppercase tracking-widest text-neonPink block mb-2">Тарифы школы</span>
+        <h2 class="text-3xl sm:text-4xl font-black uppercase text-slate-900 mb-3">
+          Стоимость тренировок и услуг
+        </h2>
+        <p class="text-slate-500 text-sm">
+          Защитная экипировка и шлем предоставляются бесплатно на каждое занятие.
+        </p>
+      </div>
+
+      <!-- Main 4-column service grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+        
+        <!-- Bike/Scooter Rental -->
+        <div class="reveal-elem reveal-delay-1 tilt-card bg-brandGray rounded-3xl p-6 border border-brandBorder hover:border-neonGreen hover:shadow-cardHover transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-white border border-brandBorder flex items-center justify-center text-2xl mb-4 shadow-sm">
+              🛴
+            </div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Прокат</span>
+            <h3 class="font-black text-xl text-slate-900 mt-1 mb-2">Аренда транспорта</h3>
+            <div class="font-black text-2xl text-slate-900 mb-3">300 ₽ <span class="text-xs font-normal text-slate-500">/ час</span></div>
+            <p class="text-xs text-slate-600 leading-relaxed mb-6">
+              Велосипеды, беговелы, самокаты и ролики для свободных тренировок в парке.
+            </p>
+          </div>
+          <button onclick="openBookingModal('Услуга: Аренда транспорта (300 ₽/час)')" class="w-full py-3 rounded-xl bg-white border border-brandBorder hover:bg-neonGreen hover:text-black font-bold text-xs uppercase tracking-wider transition-all">
+            Взять в прокат
+          </button>
+        </div>
+
+        <!-- Single Group Class -->
+        <div class="reveal-elem reveal-delay-2 tilt-card bg-brandGray rounded-3xl p-6 border border-brandBorder hover:border-neonPink hover:shadow-cardHover transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-neonPink/10 flex items-center justify-center text-2xl mb-4 shadow-sm">
+              👥
+            </div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-neonPink">Группа</span>
+            <h3 class="font-black text-xl text-slate-900 mt-1 mb-2">Разовое занятие</h3>
+            <div class="font-black text-2xl text-neonPink mb-3">1 000 ₽</div>
+            <p class="text-xs text-slate-600 leading-relaxed mb-6">
+              Групповая тренировка (60 минут) с тренером по любому направлению на выбор.
+            </p>
+          </div>
+          <button onclick="openBookingModal('Услуга: Разовое групповое занятие (1 000 ₽)')" class="w-full py-3 rounded-xl bg-neonPink text-white hover:bg-neonPinkHover shadow-pinkGlow font-bold text-xs uppercase tracking-wider transition-all">
+            Записаться
+          </button>
+        </div>
+
+        <!-- Individual 1-on-1 Lesson -->
+        <div class="reveal-elem reveal-delay-3 tilt-card bg-white rounded-3xl p-6 border-2 border-slate-900 shadow-deepCard hover:shadow-cardHover transition-all flex flex-col justify-between relative">
+          <span class="absolute -top-3 right-4 px-3 py-0.5 rounded-full bg-slate-900 text-white font-black text-[10px] uppercase tracking-wider">
+            Хит по скорости
+          </span>
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-slate-100 flex items-center justify-center text-2xl mb-4">
+              🎯
+            </div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500">1 на 1 с тренером</span>
+            <h3 class="font-black text-xl text-slate-900 mt-1 mb-2">Индивидуальное</h3>
+            <div class="font-black text-2xl text-slate-900 mb-3">1 500 ₽</div>
+            <p class="text-xs text-slate-600 leading-relaxed mb-6">
+              Персональный фокус на технике ученика. Обучение двухколесному велосипеду за 1 занятие.
+            </p>
+          </div>
+          <button onclick="openBookingModal('Услуга: Индивидуальное занятие (1 500 ₽)')" class="w-full py-3 rounded-xl bg-slate-900 text-white hover:bg-neonPink font-bold text-xs uppercase tracking-wider transition-all">
+            Записаться 1 на 1
+          </button>
+        </div>
+
+        <!-- Skatepark Rental -->
+        <div class="reveal-elem reveal-delay-4 tilt-card bg-brandGray rounded-3xl p-6 border border-brandBorder hover:border-neonGreen hover:shadow-cardHover transition-all flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-emerald-100 flex items-center justify-center text-2xl mb-4 shadow-sm">
+              🛹
+            </div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-600">Эксклюзив</span>
+            <h3 class="font-black text-xl text-slate-900 mt-1 mb-2">Аренда скейт-парка</h3>
+            <div class="font-black text-2xl text-slate-900 mb-3">4 000 ₽ <span class="text-xs font-normal text-slate-500">/ час</span></div>
+            <p class="text-xs text-slate-600 leading-relaxed mb-6">
+              Полное закрытие крытого скейт-парка под праздники, дни рождения или видеосъемки.
+            </p>
+          </div>
+          <button onclick="openBookingModal('Услуга: Аренда скейт-парка (4 000 ₽/час)')" class="w-full py-3 rounded-xl bg-white border border-brandBorder hover:bg-neonGreen hover:text-black font-bold text-xs uppercase tracking-wider transition-all">
+            Забронировать парк
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Abonnement Packages Box -->
+      <div class="reveal-elem bg-brandGray rounded-3xl p-6 sm:p-10 border border-brandBorder shadow-sm">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-6 border-b border-brandBorder">
+          <div>
+            <span class="text-xs font-black uppercase tracking-wider text-neonPink">Выгодные пакеты</span>
+            <h3 class="text-2xl sm:text-3xl font-black uppercase text-slate-900">
+              Абонементы на регулярные тренировки
+            </h3>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-500 max-w-md">
+            Экономия до 300 ₽ с каждого занятия. Абонемент действует на все секции и направления школы.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <div class="bg-white p-6 rounded-2xl border border-brandBorder hover:border-slate-400 transition-all flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">Базовый старт</div>
+              <h4 class="font-black text-lg text-slate-900">Абонемент на 4 занятия</h4>
+              <div class="font-black text-2xl text-neonPink my-2">3 200 ₽</div>
+              <p class="text-xs text-slate-500 mb-4">800 ₽ за 1 тренировку</p>
+            </div>
+            <button onclick="openBookingModal('Абонемент: 4 занятия (3 200 ₽)')" class="w-full py-2.5 rounded-xl bg-brandGray hover:bg-neonPink hover:text-white font-bold text-xs uppercase tracking-wider transition-all">
+              Выбрать абонемент
+            </button>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border-2 border-neonPink shadow-sm hover:shadow-pinkGlow transition-all flex flex-col justify-between relative">
+            <span class="absolute -top-3 right-4 px-3 py-0.5 rounded-full bg-neonPink text-white font-black text-[9px] uppercase tracking-wider">
+              Выбор родителей
+            </span>
+            <div>
+              <div class="text-[11px] font-bold uppercase tracking-wider text-neonPink mb-1">Оптимальный</div>
+              <h4 class="font-black text-lg text-slate-900">Абонемент на 6 занятий</h4>
+              <div class="font-black text-2xl text-neonPink my-2">4 500 ₽</div>
+              <p class="text-xs text-slate-500 mb-4">750 ₽ за 1 тренировку</p>
+            </div>
+            <button onclick="openBookingModal('Абонемент: 6 занятий (4 500 ₽)')" class="w-full py-2.5 rounded-xl bg-neonPink text-white shadow-pinkGlow hover:bg-neonPinkHover font-bold text-xs uppercase tracking-wider transition-all">
+              Выбрать абонемент
+            </button>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-brandBorder hover:border-neonGreen transition-all flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-bold uppercase tracking-wider text-emerald-600 mb-1">Максимум прогресса</div>
+              <h4 class="font-black text-lg text-slate-900">Абонемент на 8 занятий</h4>
+              <div class="font-black text-2xl text-slate-900 my-2">5 600 ₽</div>
+              <p class="text-xs text-slate-500 mb-4">700 ₽ за 1 тренировку (макс. выгода)</p>
+            </div>
+            <button onclick="openBookingModal('Абонемент: 8 занятий (5 600 ₽)')" class="w-full py-2.5 rounded-xl bg-brandGray hover:bg-neonGreen hover:text-black font-bold text-xs uppercase tracking-wider transition-all">
+              Выбрать абонемент
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="schedule" class="py-20 bg-brandGray border-b border-brandBorder">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="reveal-elem flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <span class="text-xs font-black uppercase tracking-widest text-emerald-600 block mb-2">Сетка тренировок</span>
+          <h2 class="text-3xl sm:text-4xl font-black uppercase text-slate-900">
+            Расписание занятий
+          </h2>
+        </div>
+        <div class="bg-neonGreenSoft border border-neonGreen/30 rounded-2xl px-5 py-3 max-w-md">
+          <p class="text-xs text-slate-700 font-medium">
+            *Тренеры могут заменять друг друга. Уточняйте запись перед выездом:
+            <a href="tel:89370609029" class="font-bold underline text-slate-900">8 (937) 060-90-29</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Schedule 4 Days Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Card 1: Mon, Wed, Fri -->
+        <div class="reveal-elem reveal-delay-1 bg-white rounded-3xl p-6 border border-brandBorder shadow-deepCard hover:border-slate-400 transition-all flex flex-col justify-between">
+          <div>
+            <div class="inline-block px-4 py-1.5 rounded-full bg-neonGreen/20 text-slate-900 font-black text-xs uppercase tracking-wider mb-5">
+              Пн, Ср, Пт
+            </div>
+            
+            <div class="space-y-4 text-xs">
+              <div class="pb-3 border-b border-brandBorder">
+                <span class="font-black text-slate-900 block text-sm">16:30 – 17:30</span>
+                <span class="text-slate-800 font-bold block">Самокат и скейт</span>
+                <span class="text-slate-500">(Тренер Дмитрий)</span>
+              </div>
+              <div class="pb-3 border-b border-brandBorder">
+                <span class="font-black text-slate-900 block text-sm">17:30 – 18:30</span>
+                <span class="text-slate-800 font-bold block">Велосипед</span>
+                <span class="text-slate-500">(Тренер Александр)</span>
+              </div>
+              <div class="pb-3 border-b border-brandBorder">
+                <span class="font-black text-slate-900 block text-sm">18:30 – 19:30</span>
+                <span class="text-slate-800 font-bold block">Ролики</span>
+                <span class="text-slate-500">(Тренер Александр)</span>
+              </div>
+              <div>
+                <span class="font-black text-slate-900 block text-sm">19:30 – 20:30</span>
+                <span class="text-slate-800 font-bold block">Беговел</span>
+                <span class="text-slate-500">(Тренер Александр)</span>
+              </div>
+            </div>
+          </div>
+
+          <button onclick="openBookingModal('Расписание: Пн, Ср, Пт')" class="mt-6 w-full py-2.5 rounded-xl bg-brandGray border border-brandBorder hover:border-neonGreen hover:bg-neonGreen hover:text-black font-bold text-xs uppercase tracking-wider transition-all">
+            Записаться на эти дни
+          </button>
+        </div>
+
+        <!-- Card 2: Tue, Thu -->
+        <div class="reveal-elem reveal-delay-2 bg-white rounded-3xl p-6 border border-brandBorder shadow-deepCard hover:border-slate-400 transition-all flex flex-col justify-between">
+          <div>
+            <div class="inline-block px-4 py-1.5 rounded-full bg-neonGreen/20 text-slate-900 font-black text-xs uppercase tracking-wider mb-5">
+              Вт, Чт
+            </div>
+            
+            <div class="space-y-4 text-xs">
+              <div class="pb-3 border-b border-brandBorder">
+                <span class="font-black text-slate-900 block text-sm">16:30 – 17:30</span>
+                <span class="text-slate-800 font-bold block">Беговел</span>
+                <span class="text-slate-500">(Тренер Денис)</span>
+              </div>
+              <div class="pb-3 border-b border-brandBorder">
+                <span class="font-black text-slate-900 block text-sm">17:30 – 18:30</span>
+                <span class="text-slate-800 font-bold block">Велосипед</span>
+                <span class="text-slate-500">(Тренер Денис)</span>
+              </div>
+              <div>
+                <span class="font-black text-neonPink block text-sm">18:30 – 20:00</span>
+                <span class="text-slate-900 font-bold block">Секция BMX (1.5 ч)</span>
+                <span class="text-slate-500">(Тренер Дмитрий)</span>
+              </div>
+            </div>
+          </div>
+
+          <button onclick="openBookingModal('Расписание: Вт, Чт')" class="mt-6 w-full py-2.5 rounded-xl bg-brandGray border border-brandBorder hover:border-neonGreen hover:bg-neonGreen hover:text-black font-bold text-xs uppercase tracking-wider transition-all">
+            Записаться на эти дни
+          </button>
+        </div>
+
+        <!-- Card 3: Saturday -->
+        <div class="reveal-elem reveal-delay-3 bg-white rounded-3xl p-6 border border-brandBorder shadow-deepCard hover:border-slate-400 transition-all flex flex-col justify-between">
+          <div>
+            <div class="inline-block px-4 py-1.5 rounded-full bg-slate-900 text-white font-black text-xs uppercase tracking-wider mb-5">
+              Суббота (Предв. запись)
+            </div>
+            
+            <div class="space-y-4 text-xs">
+              <div class="pb-3 border-b border-brandBorder">
+                <span class="font-black text-slate-900 block text-sm">12:00 – 13:00</span>
+                <span class="text-slate-800 font-bold block">Беговел</span>
+                <span class="text-slate-500">(Тренер Денис)</span>
+              </div>
+              <div class="pb-3 border-b border-brandBorder">
+                <span class="font-black text-slate-900 block text-sm">13:00 – 14:00</span>
+                <span class="text-slate-800 font-bold block">Велосипед</span>
+                <span class="text-slate-500">(Тренер Денис)</span>
+              </div>
+              <div class="pb-3 border-b border-brandBorder">
+                <span class="font-black text-slate-900 block text-sm">14:00 – 15:00</span>
+                <span class="text-slate-800 font-bold block">Велосипед</span>
+                <span class="text-slate-500">(Тренер Денис)</span>
+              </div>
+              <div>
+                <span class="font-black text-emerald-600 block text-sm">15:00 – 20:00</span>
+                <span class="text-slate-900 font-bold block">Свободное катание</span>
+                <span class="text-slate-500">Вход в скейт-парк</span>
+              </div>
+            </div>
+          </div>
+
+          <button onclick="openBookingModal('Расписание: Суббота')" class="mt-6 w-full py-2.5 rounded-xl bg-brandGray border border-brandBorder hover:border-slate-900 hover:bg-slate-900 hover:text-white font-bold text-xs uppercase tracking-wider transition-all">
+            Записаться на субботу
+          </button>
+        </div>
+
+        <!-- Card 4: Sunday -->
+        <div class="reveal-elem reveal-delay-4 bg-white rounded-3xl p-6 border border-brandBorder shadow-deepCard hover:border-slate-400 transition-all flex flex-col justify-between">
+          <div>
+            <div class="inline-block px-4 py-1.5 rounded-full bg-slate-900 text-white font-black text-xs uppercase tracking-wider mb-5">
+              Воскресенье (Предв. запись)
+            </div>
+            
+            <div class="space-y-4 text-xs">
+              <div class="pb-3 border-b border-brandBorder">
+                <span class="font-black text-neonPink block text-sm">11:30 – 13:00</span>
+                <span class="text-slate-900 font-bold block">Секция BMX (1.5 ч)</span>
+                <span class="text-slate-500">(Тренер Дмитрий)</span>
+              </div>
+              <div>
+                <span class="font-black text-emerald-600 block text-sm">13:00 – 20:00</span>
+                <span class="text-slate-900 font-bold block">Свободное катание</span>
+                <span class="text-slate-500">Вход в скейт-парк</span>
+              </div>
+            </div>
+          </div>
+
+          <button onclick="openBookingModal('Расписание: Воскресенье')" class="mt-6 w-full py-2.5 rounded-xl bg-brandGray border border-brandBorder hover:border-slate-900 hover:bg-slate-900 hover:text-white font-bold text-xs uppercase tracking-wider transition-all">
+            Записаться на воскресенье
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="blog" class="py-20 bg-brandWhite border-b border-brandBorder">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="reveal-elem flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <span class="text-xs font-black uppercase tracking-widest text-neonPink block mb-2">База знаний</span>
+          <h2 class="text-3xl sm:text-4xl font-black uppercase text-slate-900">
+            Статьи и советы от тренеров
+          </h2>
+        </div>
+        <p class="text-slate-500 text-xs sm:text-sm max-w-md">
+          Помогаем родителям выбрать первый байк, понять безопасность в скейт-парке и развить баланс ребенка.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Article 1 -->
+        <article class="reveal-elem reveal-delay-1 bg-brandGray rounded-3xl p-7 border border-brandBorder hover:border-slate-400 transition-all flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="flex items-center gap-2 mb-3 text-xs text-slate-500">
+              <span class="text-emerald-600 font-bold">Выбор инвентаря</span>
+              <span>•</span>
+              <span>4 мин</span>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900 mb-3 hover:text-neonPink cursor-pointer transition-colors" onclick="openArticle(1)">
+              Как выбрать первый BMX или трюковой самокат для ребенка: инструкция от тренеров
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-6">
+              Разбор ростовок, веса рамы, промышленных подшипников и почему дешевые байки из гипермаркетов опасны для начинающих.
+            </p>
+          </div>
+          <button onclick="openArticle(1)" class="inline-flex items-center gap-2 text-xs font-bold text-neonPink uppercase hover:underline">
+            Читать полностью →
+          </button>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="reveal-elem reveal-delay-2 bg-brandGray rounded-3xl p-7 border border-brandBorder hover:border-slate-400 transition-all flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="flex items-center gap-2 mb-3 text-xs text-slate-500">
+              <span class="text-neonPink font-bold">Безопасность</span>
+              <span>•</span>
+              <span>3 мин</span>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900 mb-3 hover:text-neonPink cursor-pointer transition-colors" onclick="openArticle(2)">
+              Гайд по защите: почему нельзя разучивать трюки без шлема full-face
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-6">
+              Анатомия падений в рампе. Почему обычный шлем-котелок оставляет челюсть открытой и как интеграл снимает страх перед катанием.
+            </p>
+          </div>
+          <button onclick="openArticle(2)" class="inline-flex items-center gap-2 text-xs font-bold text-neonPink uppercase hover:underline">
+            Читать полностью →
+          </button>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="reveal-elem reveal-delay-3 bg-brandGray rounded-3xl p-7 border border-brandBorder hover:border-slate-400 transition-all flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="flex items-center gap-2 mb-3 text-xs text-slate-500">
+              <span class="text-slate-900 font-bold">Для малышей</span>
+              <span>•</span>
+              <span>5 мин</span>
+            </div>
+            <h3 class="font-bold text-lg text-slate-900 mb-3 hover:text-emerald-600 cursor-pointer transition-colors" onclick="openArticle(3)">
+              Беговел или двухколесный велосипед: с чего начать в 3-4 года
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-6">
+              Почему боковые приставные колесики затормаживают прогресс и как методика школы «ЦЕНТР» ставит на два колеса за 1 занятие.
+            </p>
+          </div>
+          <button onclick="openArticle(3)" class="inline-flex items-center gap-2 text-xs font-bold text-emerald-600 uppercase hover:underline">
+            Читать полностью →
+          </button>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contacts" class="py-20 bg-brandGray border-b border-brandBorder">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="reveal-elem bg-white rounded-3xl p-8 sm:p-12 border-2 border-slate-900 shadow-xl relative overflow-hidden">
+        
+        <div class="text-center max-w-xl mx-auto mb-8">
+          <span class="px-4 py-1.5 rounded-full bg-neonGreen/20 text-slate-900 font-extrabold text-xs uppercase tracking-wider inline-block mb-3">
+            Первая тренировка — 0 ₽
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-black uppercase text-slate-900 mb-2">
+            Запишитесь на бесплатный урок
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-500">
+            Заполните форму ниже — заявка автоматически откроется в диалоге ВКонтакте, либо мы перезвоним вам в течение 10 минут!
+          </p>
+        </div>
+
+        <!-- Quick Contacts Hub -->
+        <div class="flex flex-wrap items-center justify-center gap-3 mb-8">
+          <a href="tel:89370609029" class="px-4 py-2 rounded-xl bg-brandGray hover:bg-slate-200 font-bold text-xs text-slate-800 flex items-center gap-2 transition-colors">
+            <span>📞</span> 8 (937) 060-90-29
+          </a>
+          <a href="https://vk.me/centrschool63" target="_blank" class="px-4 py-2 rounded-xl bg-vkBlue text-white hover:bg-blue-600 font-bold text-xs flex items-center gap-2 transition-colors">
+            <span>💬</span> Сообщество ВКонтакте
+          </a>
+          <a href="https://wa.me/79370609029" target="_blank" class="px-4 py-2 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-200 hover:bg-emerald-100 font-bold text-xs flex items-center gap-2 transition-colors">
+            <span>📱</span> WhatsApp
+          </a>
+        </div>
+
+        <!-- Lead Form with Auto VK routing -->
+        <form onsubmit="handleVKLeadSubmit(event)" class="space-y-4 max-w-lg mx-auto">
+          <div>
+            <label class="block text-xs uppercase font-extrabold text-slate-800 mb-1">Имя родителя или ученика:</label>
+            <input type="text" id="leadName" required placeholder="Например: Мария" class="w-full px-4 py-3.5 rounded-xl bg-brandGray border border-brandBorder text-slate-900 placeholder-slate-400 focus:outline-none focus:border-neonPink transition-colors text-sm">
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs uppercase font-extrabold text-slate-800 mb-1">Телефон:</label>
+              <input type="tel" id="leadPhone" required placeholder="8 (937) 060-90-29" class="w-full px-4 py-3.5 rounded-xl bg-brandGray border border-brandBorder text-slate-900 placeholder-slate-400 focus:outline-none focus:border-neonPink transition-colors text-sm">
+            </div>
+            <div>
+              <label class="block text-xs uppercase font-extrabold text-slate-800 mb-1">Возраст ученика:</label>
+              <input type="text" id="leadAge" placeholder="Например: 6 лет" class="w-full px-4 py-3.5 rounded-xl bg-brandGray border border-brandBorder text-slate-900 placeholder-slate-400 focus:outline-none focus:border-neonPink transition-colors text-sm">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs uppercase font-extrabold text-slate-800 mb-1">Направление / Услуга:</label>
+            <select id="leadService" class="w-full px-4 py-3.5 rounded-xl bg-brandGray border border-brandBorder text-slate-900 focus:outline-none focus:border-neonPink transition-colors text-sm font-medium">
+              <option value="Велосипед за 1 занятие с нуля">Велосипед за 1 занятие (с нуля)</option>
+              <option value="Беговел (от 3 лет)">Беговел (от 3 лет)</option>
+              <option value="Секция BMX (трюки и байки VЁRT)">Секция BMX (трюки и байки VЁRT)</option>
+              <option value="Самокат и скейтборд">Самокат и скейтборд</option>
+              <option value="Ролики">Ролики</option>
+              <option value="Индивидуальное занятие (1 500 ₽)">Индивидуальное занятие (1 500 ₽)</option>
+              <option value="Шлем Tech Team Full-Face (6 000 ₽)">Шлем Tech Team Full-Face (6 000 ₽)</option>
+              <option value="BMX Велосипед VЁRT (от 30 000 ₽)">BMX Велосипед VЁRT (от 30 000 ₽)</option>
+              <option value="Аренда скейт-парка (4 000 ₽/час)">Аренда скейт-парка (4 000 ₽/час)</option>
+            </select>
+          </div>
+
+          <!-- Dual Submission: Primary VK Action & Direct Site Button -->
+          <div class="pt-2 flex flex-col gap-3">
+            <button type="submit" class="w-full py-4 rounded-xl bg-neonPink text-white font-black text-xs uppercase tracking-wider shadow-pinkGlow hover:bg-neonPinkHover hover:scale-102 active:scale-95 transition-all">
+              ⚡ Отправить заявку и открыть ВКонтакте
+            </button>
+            <button type="button" onclick="handleDirectSiteSubmit()" class="w-full py-3 rounded-xl bg-brandGray border border-brandBorder text-slate-700 font-bold text-xs uppercase tracking-wider hover:bg-slate-200 transition-all">
+              Оставить заявку без перехода в соцсети
+            </button>
+          </div>
+
+          <p class="text-[11px] text-center text-slate-400 mt-2">
+            Адрес: г. Тольятти, Южное шоссе, 5. Первая тренировка бесплатна.
+          </p>
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-white text-slate-500 py-12 text-sm border-t border-brandBorder">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <!-- Logo in Footer -->
+      <div class="w-40">
+        <svg viewBox="0 0 420 180" class="w-full h-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path d="M 12 60 L 26 60 L 26 95 C 34 135 72 162 110 162 L 12 162 Z" fill="#000000"/>
+            <path d="M 408 60 L 394 60 L 394 95 C 386 135 348 162 310 162 L 408 162 Z" fill="#000000"/>
+            <text x="204" y="112" text-anchor="middle" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="64" font-style="italic" fill="#000000" letter-spacing="1.5">ЦЕНТР</text>
+            <circle cx="330" cy="102" r="11" fill="#ff007a"/>
+            <text x="210" y="148" text-anchor="middle" font-family="'Inter', 'Arial', sans-serif" font-weight="600" font-size="25" font-style="italic" fill="#000000" letter-spacing="1">велошкола</text>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Navigation & Working hours -->
+      <div class="flex flex-wrap items-center justify-center gap-6 text-xs font-semibold text-slate-700">
+        <span>Пн-Вс: с 10:00 до 21:00</span>
+        <a href="tel:89370609029" class="text-slate-900 hover:text-neonPink transition-colors font-extrabold text-sm">8 (937) 060-90-29</a>
+        <a href="https://vk.me/centrschool63" target="_blank" class="text-vkBlue hover:underline">ВКонтакте</a>
+        <a href="https://wa.me/79370609029" target="_blank" class="text-emerald-600 hover:underline">WhatsApp</a>
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-xs text-slate-400">
+        © 2026 Велошкола «ЦЕНТР» Тольятти. Все права защищены.
+      </div>
+
+    </div>
+  </footer>
+
+  
+  <!-- General Booking Modal -->
+  <div id="bookingModal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white border border-brandBorder w-full max-w-md rounded-3xl p-6 sm:p-8 relative shadow-2xl">
+      <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-800 text-xl font-bold p-2">✕</button>
+      
+      <span class="text-xs uppercase font-extrabold text-neonPink block mb-2" id="modalSourceTag">Запись на тренировку</span>
+      <h3 class="text-2xl font-black text-slate-900 mb-2">Бесплатный первый урок</h3>
+      <p class="text-xs text-slate-500 mb-6">Тольятти, Южное шоссе, 5. Полная экипировка и шлем включены.</p>
+
+      <form onsubmit="handleModalSubmit(event)" class="space-y-4">
+        <div>
+          <input type="text" id="modalName" required placeholder="Ваше имя" class="w-full px-4 py-3 rounded-xl bg-brandGray border border-brandBorder text-slate-900 text-sm focus:outline-none focus:border-neonPink">
+        </div>
+        <div>
+          <input type="tel" id="modalPhone" required placeholder="Номер телефона (8 937 060-90-29)" class="w-full px-4 py-3 rounded-xl bg-brandGray border border-brandBorder text-slate-900 text-sm focus:outline-none focus:border-neonPink">
+        </div>
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-neonPink text-white font-black text-xs uppercase tracking-wider shadow-pinkGlow hover:bg-neonPinkHover transition-all">
+          Записаться через ВКонтакте
+        </button>
+        <button type="button" onclick="submitModalDirect()" class="w-full py-2.5 rounded-xl bg-brandGray text-slate-700 font-bold text-xs uppercase tracking-wider hover:bg-slate-200 transition-all">
+          Отправить заявку по телефону
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Article Reader Modal -->
+  <div id="articleModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden items-center justify-center p-4 overflow-y-auto">
+    <div class="bg-white border border-brandBorder w-full max-w-2xl rounded-3xl p-6 sm:p-10 relative my-8 shadow-2xl">
+      <button onclick="closeArticleModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-800 text-2xl font-bold p-2">✕</button>
+      
+      <div id="articleModalContent" class="text-slate-700 text-sm leading-relaxed space-y-4">
+        <!-- Dynamically injected -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Toast Notice -->
+  <div id="successToast" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white px-6 py-4 rounded-2xl font-bold text-xs uppercase tracking-wider shadow-2xl border border-neonGreen hidden items-center gap-3">
+    <span class="text-neonGreen text-base">✔</span>
+    <span id="toastMessage">Заявка принята! Тренер перезвонит вам в течение 10 минут.</span>
+  </div>
+
+  <script>
+    // Articles Dataset
+    const articlesDB = {
+      1: {
+        tag: "Инструкция тренеров школы «ЦЕНТР»",
+        content: `
+          <h2 class="text-2xl font-black text-slate-900 mb-4">Как правильно выбрать BMX или самокат для ребенка</h2>
+          <p>Покупка трюкового инвентаря в масс-маркетах — частая ошибка. Дешевые велосипеды весят по 15–16 кг: ребенку не под силу поднять переднее колесо и выдернуть руль.</p>
+          <p class="font-bold text-slate-900">1. Ростовка рамы под рост райдера:</p>
+          <p>Для детей ростом 120–145 см лучше выбирать колеса 18" или компактную раму 20" (длина верхней трубы 20.25). Это дает маневренность и сохраняет осанку.</p>
+          <p class="font-bold text-slate-900">2. Закрытые промышленные подшипники:</p>
+          <p>В байках <b>VЁRT</b> (от 30 000 ₽) каретка и рулевая собраны на промах. Насыпные аналоги быстро разбалтываются и клинят после первой недели прыжков.</p>
+          <div class="p-4 bg-brandGray rounded-2xl border border-brandBorder mt-6">
+            <span class="text-xs text-neonPink font-bold block mb-1">Примерка в Тольятти:</span>
+            Приходите на <b>Южное шоссе, 5</b> — поможем с примеркой и дадим протестировать байк в нашем крытом скейт-парке!
+          </div>
+        `
+      },
+      2: {
+        tag: "Безопасность учеников",
+        content: `
+          <h2 class="text-2xl font-black text-slate-900 mb-4">Почему мы настаиваем на шлеме Full-Face</h2>
+          <p>Обычный шлем-котелок закрывает только верхнюю часть черепа. Но при прыжках в рампе основной вектор падения направлен вперед — в зону челюсти и зубов.</p>
+          <p class="font-bold text-neonPink">Преимущества монолитного интеграла Tech Team (6 000 ₽):</p>
+          <p>1. <b>Литая челюстная дуга:</b> Защищает лицо при ударе о руль или грань фанерного радиуса.</p>
+          <p>2. <b>Легкий композит:</b> Шлем не перегружает шею ребенка во время часовой тренировки.</p>
+          <p>3. <b>Психологический комфорт:</b> Чувствуя себя в броне, ученик перестает бояться и делает трюки увереннее.</p>
+          <div class="p-4 bg-brandGray rounded-2xl border border-brandBorder mt-6">
+            <span class="text-xs text-emerald-600 font-bold block mb-1">В наличии в школе:</span>
+            Шлемы Tech Team Full-Face доступны за <b>6 000 ₽</b> в Тольятти (Южное шоссе, 5).
+          </div>
+        `
+      },
+      3: {
+        tag: "Родителям малышей",
+        content: `
+          <h2 class="text-2xl font-black text-slate-900 mb-4">Секрет легкого старта: как поехать за 1 занятие</h2>
+          <p>Приставные боковые колесики приучают ребенка наклоняться в сторону опоры. Когда их снимают, малыш заваливается и боится сделать шаг.</p>
+          <p class="font-bold text-slate-900">Методика школы «ЦЕНТР»:</p>
+          <p>Мы временно снимаем педали или используем беговел для поиска естественного динамического баланса. За 20 минут вестибулярный аппарат перестраивается, возвращаются педали — и ребенок едет самостоятельно!</p>
+          <div class="p-4 bg-brandGray rounded-2xl border border-brandBorder mt-6">
+            <span class="text-xs text-neonPink font-bold block mb-1">Проверьте лично бесплатно:</span>
+            Первая тренировка — 0 ₽. Запись по телефону <b>8 (937) 060-90-29</b>.
+          </div>
+        `
+      }
+    };
+
+    // Scroll Reveal IntersectionObserver
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      document.querySelectorAll('.reveal-elem').forEach(el => observer.observe(el));
+
+      // 3D Card Hover Tilt with smooth physics
+      const tiltCards = document.querySelectorAll('.tilt-card');
+      tiltCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+
+          const rotateX = ((y - centerY) / centerY) * -7;
+          const rotateY = ((x - centerX) / centerX) * 7;
+
+          card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+        });
+      });
+    });
+
+    // Modal Operations
+    let currentSource = "Сайт";
+    function openBookingModal(source = "Запись на занятие") {
+      currentSource = source;
+      document.getElementById('modalSourceTag').innerText = source;
+      const modal = document.getElementById('bookingModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeBookingModal() {
+      const modal = document.getElementById('bookingModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function openArticle(id) {
+      const art = articlesDB[id];
+      if (!art) return;
+      document.getElementById('articleModalContent').innerHTML = `
+        <span class="text-xs uppercase font-extrabold text-neonPink block">${art.tag}</span>
+        ${art.content}
+      `;
+      const modal = document.getElementById('articleModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeArticleModal() {
+      const modal = document.getElementById('articleModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('successToast');
+      document.getElementById('toastMessage').innerText = msg;
+      toast.classList.remove('hidden');
+      toast.classList.add('flex');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+        toast.classList.remove('flex');
+      }, 5500);
+    }
+
+    // VK Lead Forwarding
+    function handleVKLeadSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('leadName').value.trim();
+      const phone = document.getElementById('leadPhone').value.trim();
+      const age = document.getElementById('leadAge').value.trim() || 'не указан';
+      const service = document.getElementById('leadService').value;
+
+      const message = `Здравствуйте! Хочу записаться в велошколу ЦЕНТР.%0A👤 Имя: ${encodeURIComponent(name)}%0A📞 Телефон: ${encodeURIComponent(phone)}%0A🎯 Направление: ${encodeURIComponent(service)}%0A👶 Возраст: ${encodeURIComponent(age)}`;
+      
+      // Target community dialog: vk.me/centrschool63
+      const vkUrl = `https://vk.me/centrschool63?message=${message}`;
+
+      showToast("Перенаправляем в диалог ВКонтакте с заполненной заявкой...");
+      setTimeout(() => {
+        window.open(vkUrl, '_blank');
+      }, 800);
+      e.target.reset();
+    }
+
+    function handleDirectSiteSubmit() {
+      const name = document.getElementById('leadName').value.trim();
+      const phone = document.getElementById('leadPhone').value.trim();
+      if (!name || !phone) {
+        alert("Пожалуйста, заполните имя и номер телефона.");
+        return;
+      }
+      showToast("Заявка принята! Тренер свяжется с вами в течение 10 минут.");
+      document.getElementById('leadName').value = '';
+      document.getElementById('leadPhone').value = '';
+      document.getElementById('leadAge').value = '';
+    }
+
+    function handleModalSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('modalName').value.trim();
+      const phone = document.getElementById('modalPhone').value.trim();
+      closeBookingModal();
+
+      const message = `Здравствуйте! Заявка на бесплатное занятие в школу ЦЕНТР.%0A👤 Имя: ${encodeURIComponent(name)}%0A📞 Телефон: ${encodeURIComponent(phone)}%0A📌 Источник: ${encodeURIComponent(currentSource)}`;
+      const vkUrl = `https://vk.me/centrschool63?message=${message}`;
+
+      showToast("Переходим в диалог ВКонтакте...");
+      setTimeout(() => {
+        window.open(vkUrl, '_blank');
+      }, 600);
+    }
+
+    function submitModalDirect() {
+      const name = document.getElementById('modalName').value.trim();
+      const phone = document.getElementById('modalPhone').value.trim();
+      if (!name || !phone) {
+        alert("Пожалуйста, введите имя и номер телефона.");
+        return;
+      }
+      closeBookingModal();
+      showToast("Заявка принята! Тренер позвонит вам для выбора времени.");
+    }
+
+    // Keyboard ESC listener
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeBookingModal();
+        closeArticleModal();
+      }
+    });
+  </script>
+</body>
+</html>
