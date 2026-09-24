@@ -3,61 +3,377 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Велошкола ЦЕНТР в Тольятти | Обучение трюковому велосипеду БМХ (BMX), самокату, скейту, роликам, беговелу с 2 лет</title>
-    <meta name="description" content="Крытая велошкола и экстрим-парк ЦЕНТР в Тольятти (Южное шоссе, 5). Тренеры с педагогическим образованием. Беговел с 2 лет, велосипед за 1 урок, трюковой самокат, ролики, скейтборд. Продажа шлемов Тек Тим (Tech Team) и велосипедов ВЁРТ (BMX VERT).">
-    <meta name="keywords" content="велошкола тольятти, школа бмх тольятти, секция трюковой самокат, беговел с 2 лет тольятти, ролики тольятти, скейтборд обучение, купить шлем фулл фейс тольятти, купить бмх тольятти, южное шоссе 5">
-
-    <meta name="geo.region" content="RU-SAM">
-    <meta name="geo.placename" content="Тольятти">
-    <meta name="geo.position" content="53.5303;49.3461">
-    <meta name="ICBM" content="53.5303, 49.3461">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Велошкола ЦЕНТР в Тольятти">
-    <meta property="og:description" content="Крытый скейтпарк, круглогодичные тренировки с дипломированными педагогами. Беговел с 2 лет, велосипед за 1 урок, трюковой спорт.">
-    <meta property="og:image" content="logo.png">
-
+    <title>Р’РµР»РѕС€РєРѕР»Р° Р¦Р•РќРўР  РІ РўРѕР»СЊСЏС‚С‚Рё | РўСЂСЋРєРѕРІРѕР№ РІРµР»РѕСЃРёРїРµРґ Р‘РњРҐ (BMX), СЃР°РјРѕРєР°С‚, СЃРєРµР№С‚, СЂРѕР»РёРєРё, Р±РµРіРѕРІРµР» СЃ 2 Р»РµС‚</title>
+    <meta name="description" content="РљСЂС‹С‚Р°СЏ РІРµР»РѕС€РєРѕР»Р° Рё СЌРєСЃС‚СЂРёРј-РїР°СЂРє Р¦Р•РќРўР  РІ РўРѕР»СЊСЏС‚С‚Рё (Р®Р¶РЅРѕРµ С€РѕСЃСЃРµ, 5). РўСЂРµРЅРµСЂС‹ СЃ РїРµРґР°РіРѕРіРёС‡РµСЃРєРёРј РѕР±СЂР°Р·РѕРІР°РЅРёРµРј. Р‘РµРіРѕРІРµР» СЃ 2 Р»РµС‚, РІРµР»РѕСЃРёРїРµРґ Р·Р° 1 СѓСЂРѕРє, С‚СЂСЋРєРѕРІРѕР№ СЃР°РјРѕРєР°С‚, СЂРѕР»РёРєРё, СЃРєРµР№С‚Р±РѕСЂРґ. РџСЂРѕРґР°Р¶Р° СЌРєРёРїРёСЂРѕРІРєРё: С€Р»РµРјС‹ РўРµРє РўРёРј (Tech Team), РІРµР»РѕСЃРёРїРµРґС‹ Р’РЃР Рў (BMX VERT).">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .brand-pink { color: #ff007a; }
         .bg-brand-pink { background-color: #ff007a; }
-        .border-brand-pink { border-color: #ff007a; }
     </style>
 </head>
-<body class="bg-neutral-950 text-white font-sans antialiased selection:bg-[#ff007a] selection:text-white pb-12">
+<body class="bg-neutral-950 text-white font-sans antialiased pb-12">
 
-    <!-- ВСПЛЫВАЮЩИЙ БАННЕР COOKIES -->
+    <!-- COOKIES Р‘РђРќРќР•Р  -->
     <div id="cookieBanner" class="fixed bottom-4 left-4 right-4 md:left-auto md:right-6 md:max-w-md bg-neutral-900 border border-neutral-700 p-4 rounded-2xl shadow-2xl z-50 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-neutral-300">
-        <div>
-            Мы используем файлы cookie для персонализации сервисов и анализа посещаемости. Оставаясь на сайте, вы соглашаетесь с условиями их обработки.
-        </div>
-        <button onclick="acceptCookies()" class="w-full sm:w-auto bg-brand-pink hover:bg-pink-600 text-white font-bold px-4 py-2 rounded-xl whitespace-nowrap transition">
-            Понятно
-        </button>
+        <div>РњС‹ РёСЃРїРѕР»СЊР·СѓРµРј С„Р°Р№Р»С‹ cookie. РћСЃС‚Р°РІР°СЏСЃСЊ РЅР° СЃР°Р№С‚Рµ, РІС‹ СЃРѕРіР»Р°С€Р°РµС‚РµСЃСЊ СЃ СѓСЃР»РѕРІРёСЏРјРё РёС… РѕР±СЂР°Р±РѕС‚РєРё.</div>
+        <button onclick="acceptCookies()" class="bg-brand-pink hover:bg-pink-600 text-white font-bold px-4 py-2 rounded-xl transition">РџРѕРЅСЏС‚РЅРѕ</button>
     </div>
 
-    <!-- ШАПКА -->
+    <!-- РЁРђРџРљРђ -->
     <header class="sticky top-0 z-40 bg-neutral-900/90 backdrop-blur-md border-b border-neutral-800">
         <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <img src="logo.png" alt="Велошкола ЦЕНТР" class="h-10 w-auto rounded-md object-contain" onerror="this.style.display='none'">
+                <img src="logo.png" alt="Р¦Р•РќРўР " class="h-10 w-auto rounded-md object-contain" onerror="this.style.display='none'">
                 <div>
-                    <span class="text-xl font-black tracking-wider block leading-tight">ЦЕНТР</span>
-                    <span class="text-[11px] text-neutral-400 tracking-wide uppercase">Велошкола • Тольятти</span>
+                    <span class="text-xl font-black tracking-wider block leading-tight">Р¦Р•РќРўР </span>
+                    <span class="text-[11px] text-neutral-400 tracking-wide uppercase">Р’РµР»РѕС€РєРѕР»Р° вЂў РўРѕР»СЊСЏС‚С‚Рё</span>
                 </div>
             </div>
             <div class="flex items-center gap-4">
-                <a href="tel:+79370609029" class="hidden sm:block text-sm font-semibold text-neutral-300 hover:text-white transition">+7 (937) 060-90-29</a>
-                <a href="#lead-form" class="bg-brand-pink hover:bg-pink-600 text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-full transition shadow-lg shadow-pink-600/30">Записаться</a>
+                <a href="tel:+79370609029" class="hidden sm:block text-sm font-semibold text-neutral-300 hover:text-white">+7 (937) 060-90-29</a>
+                <a href="#lead-form" class="bg-brand-pink hover:bg-pink-600 text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-full transition">Р—Р°РїРёСЃР°С‚СЊСЃСЏ</a>
             </div>
         </div>
     </header>
 
-    <!-- ГЛАВНЫЙ ЭКРАН -->
-    <section class="relative py-14 sm:py-20 px-4 text-center border-b border-neutral-800 bg-gradient-to-b from-neutral-900 to-neutral-950">
+    <!-- Р“Р›РђР’РќР«Р™ Р‘Р›РћРљ -->
+    <section class="py-14 sm:py-20 px-4 text-center border-b border-neutral-800 bg-gradient-to-b from-neutral-900 to-neutral-950">
         <div class="max-w-4xl mx-auto">
             <div class="inline-block bg-neutral-800 border border-neutral-700 text-xs sm:text-sm text-neutral-300 px-4 py-1.5 rounded-full mb-6">
-                📍 Тольятти, Южное шоссе, 5 (2 этаж) • Теплый крытый парк
+                рџ“Ќ РўРѕР»СЊСЏС‚С‚Рё, Р®Р¶РЅРѕРµ С€РѕСЃСЃРµ, 5 (2 СЌС‚Р°Р¶) вЂў РўРµРїР»С‹Р№ РєСЂС‹С‚С‹Р№ РїР°СЂРє
             </div>
-            <h1 class="text-3xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight leading
+            <h1 class="text-3xl sm:text-5xl font-black uppercase tracking-tight leading-tight mb-6">
+                РЁРєРѕР»Р° СЌРєСЃС‚СЂРµРјР°Р»СЊРЅРѕРіРѕ СЃРїРѕСЂС‚Р° <br><span class="brand-pink">РґР»СЏ РґРµС‚РµР№ Рё РІР·СЂРѕСЃР»С‹С…</span>
+            </h1>
+            <p class="text-base sm:text-lg text-neutral-300 max-w-2xl mx-auto mb-8">
+                РћР±СѓС‡РµРЅРёРµ СЃ РЅСѓР»СЏ Рё РїСЂРѕРіСЂРµСЃСЃРёРІРЅС‹Рј С‚СЂСЋРєР°Рј: Р±РµРіРѕРІРµР» <strong class="text-white">СЃ 2 Р»РµС‚</strong>, РІРµР»РѕСЃРёРїРµРґ Р·Р° 1вЂ“2 СѓСЂРѕРєР°, С‚СЂСЋРєРѕРІРѕР№ РІРµР»РѕСЃРёРїРµРґ Р‘РњРҐ (BMX), С‚СЂСЋРєРѕРІРѕР№ СЃР°РјРѕРєР°С‚, СЂРѕР»РёРєРё Рё СЃРєРµР№С‚Р±РѕСЂРґ.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#lead-form" class="w-full sm:w-auto bg-brand-pink hover:bg-pink-600 text-white font-extrabold text-base px-8 py-4 rounded-xl transition shadow-xl shadow-pink-600/40">
+                    Р—Р°РїРёСЃР°С‚СЊСЃСЏ РЅР° Р·Р°РЅСЏС‚РёРµ в†’
+                </a>
+                <a href="https://vk.ru/centrschool63" target="_blank" class="w-full sm:w-auto bg-neutral-800 hover:bg-neutral-700 text-neutral-200 font-bold text-base px-8 py-4 rounded-xl border border-neutral-700 transition">
+                    РЎРѕРѕР±С‰РµСЃС‚РІРѕ Р’РљРѕРЅС‚Р°РєС‚Рµ
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. РўР Р•РќР•Р Р« РЎ РџР•Р”РђР“РћР“РР§Р•РЎРљРРњ РћР‘Р РђР—РћР’РђРќРР•Рњ -->
+    <section class="py-16 px-4 max-w-6xl mx-auto border-b border-neutral-800">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="text-xs font-extrabold text-[#ff007a] uppercase tracking-widest">Р‘РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ Рё РјРµС‚РѕРґРёРєР°</span>
+            <h2 class="text-2xl sm:text-4xl font-black uppercase mt-1 mb-3">РўСЂРµРЅРµСЂСЃРєРёР№ СЃРѕСЃС‚Р°РІ</h2>
+            <p class="text-neutral-400 text-sm sm:text-base">Р’СЃРµ РЅР°СЃС‚Р°РІРЅРёРєРё РёРјРµСЋС‚ <strong class="text-white">РїСЂРѕС„РёР»СЊРЅРѕРµ РїРµРґР°РіРѕРіРёС‡РµСЃРєРѕРµ РѕР±СЂР°Р·РѕРІР°РЅРёРµ</strong>. РРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Р№ РїРѕРґС…РѕРґ Рє РґРµС‚СЏРј СЃ 2 Р»РµС‚ Рё Р±РµР·РѕРїР°СЃРЅР°СЏ СЃС‚СЂР°С…РѕРІРєР°.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-neutral-900 border border-neutral-800 rounded-3xl overflow-hidden flex flex-col justify-between">
+                <div>
+                    <div class="h-56 bg-neutral-800 relative">
+                        <img src="trainer1.jpg" alt="РњР°Р»СЏРµРІ Р”РјРёС‚СЂРёР№ РђРЅР°С‚РѕР»СЊРµРІРёС‡" class="w-full h-full object-cover object-top" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&auto=format&fit=crop&q=80';">
+                        <span class="absolute bottom-2 left-2 bg-neutral-950/80 text-[10px] font-bold px-2 py-0.5 rounded text-pink-400">РџРµРґ. РѕР±СЂР°Р·РѕРІР°РЅРёРµ</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-base mb-1">РњР°Р»СЏРµРІ Р”РјРёС‚СЂРёР№ РђРЅР°С‚РѕР»СЊРµРІРёС‡</h3>
+                        <p class="text-xs brand-pink font-semibold uppercase mb-2">Р‘РњРҐ (BMX) вЂў Р’РµР»РѕСЃРёРїРµРґ вЂў Р‘РµРіРѕРІРµР»</p>
+                        <p class="text-neutral-400 text-xs">РЎС‚Р°СЂС€РёР№ С‚СЂРµРЅРµСЂ. РџРѕСЃС‚Р°РЅРѕРІРєР° Р±Р°Р»Р°РЅСЃР° СЃ 2 Р»РµС‚ Рё РѕР±СѓС‡РµРЅРёРµ РІРµР»РѕСЃРёРїРµРґСѓ Р±РµР· РєРѕР»РµСЃРёРєРѕРІ Р·Р° 1вЂ“2 СѓСЂРѕРєР°.</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0"><a href="#lead-form" class="w-full block text-center bg-neutral-800 hover:bg-neutral-700 text-xs font-bold py-2 rounded-xl border border-neutral-700">Р—Р°РїРёСЃР°С‚СЊСЃСЏ</a></div>
+            </div>
+
+            <div class="bg-neutral-900 border border-neutral-800 rounded-3xl overflow-hidden flex flex-col justify-between">
+                <div>
+                    <div class="h-56 bg-neutral-800 relative">
+                        <img src="trainer2.jpg" alt="РњРѕР»С‡Р°РЅРѕРІ РђР»РµРєСЃР°РЅРґСЂ Р’Р»Р°РґРёРјРёСЂРѕРІРёС‡" class="w-full h-full object-cover object-top" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop&q=80';">
+                        <span class="absolute bottom-2 left-2 bg-neutral-950/80 text-[10px] font-bold px-2 py-0.5 rounded text-pink-400">РџРµРґ. РѕР±СЂР°Р·РѕРІР°РЅРёРµ</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-base mb-1">РњРѕР»С‡Р°РЅРѕРІ РђР»РµРєСЃР°РЅРґСЂ Р’Р»Р°РґРёРјРёСЂРѕРІРёС‡</h3>
+                        <p class="text-xs brand-pink font-semibold uppercase mb-2">РўСЂСЋРєРѕРІРѕР№ СЃР°РјРѕРєР°С‚ вЂў Р‘РњРҐ</p>
+                        <p class="text-neutral-400 text-xs">Р”РёРїР»РѕРјРёСЂРѕРІР°РЅРЅС‹Р№ РїРµРґР°РіРѕРі. РћР±СѓС‡РµРЅРёРµ Р±РµР·РѕРїР°СЃРЅС‹Рј РїР°РґРµРЅРёСЏРј, Р±Р°Р»Р°РЅСЃСѓ Рё Р±Р°Р·РѕРІС‹Рј С‚СЂСЋРєР°Рј РІ РїР°СЂРєРµ.</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0"><a href="#lead-form" class="w-full block text-center bg-neutral-800 hover:bg-neutral-700 text-xs font-bold py-2 rounded-xl border border-neutral-700">Р—Р°РїРёСЃР°С‚СЊСЃСЏ</a></div>
+            </div>
+
+            <div class="bg-neutral-900 border border-neutral-800 rounded-3xl overflow-hidden flex flex-col justify-between">
+                <div>
+                    <div class="h-56 bg-neutral-800 relative">
+                        <img src="trainer3.jpg" alt="Р•Р»РёСЃРµРµРІ Р”РµРЅРёСЃ Р’Р»Р°РґРёРјРёСЂРѕРІРёС‡" class="w-full h-full object-cover object-top" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&auto=format&fit=crop&q=80';">
+                        <span class="absolute bottom-2 left-2 bg-neutral-950/80 text-[10px] font-bold px-2 py-0.5 rounded text-pink-400">РџРµРґ. РѕР±СЂР°Р·РѕРІР°РЅРёРµ</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-base mb-1">Р•Р»РёСЃРµРµРІ Р”РµРЅРёСЃ Р’Р»Р°РґРёРјРёСЂРѕРІРёС‡</h3>
+                        <p class="text-xs brand-pink font-semibold uppercase mb-2">РЎРєРµР№С‚Р±РѕСЂРґ вЂў Р РѕР»РёРєРё</p>
+                        <p class="text-neutral-400 text-xs">РџСЂРѕС„РёР»СЊРЅРѕРµ РїРµРґРѕР±СЂР°Р·РѕРІР°РЅРёРµ. Р Р°Р·РІРёС‚РёРµ РєРѕРѕСЂРґРёРЅР°С†РёРё, РїРѕСЃС‚Р°РЅРѕРІРєР° РїСЂР°РІРёР»СЊРЅРѕР№ СЃС‚РѕР№РєРё Рё РїСЂРµРѕРґРѕР»РµРЅРёРµ СЃС‚СЂР°С…Р°.</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0"><a href="#lead-form" class="w-full block text-center bg-neutral-800 hover:bg-neutral-700 text-xs font-bold py-2 rounded-xl border border-neutral-700">Р—Р°РїРёСЃР°С‚СЊСЃСЏ</a></div>
+            </div>
+
+            <div class="bg-neutral-900 border border-neutral-800 rounded-3xl overflow-hidden flex flex-col justify-between">
+                <div>
+                    <div class="h-56 bg-neutral-800 relative">
+                        <img src="trainer4.jpg" alt="Р§СѓР»РєРѕРІ Р•РіРѕСЂ РђР»РµРєСЃРµРµРІРёС‡" class="w-full h-full object-cover object-top" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&auto=format&fit=crop&q=80';">
+                        <span class="absolute bottom-2 left-2 bg-neutral-950/80 text-[10px] font-bold px-2 py-0.5 rounded text-pink-400">РџРµРґ. РѕР±СЂР°Р·РѕРІР°РЅРёРµ</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-base mb-1">Р§СѓР»РєРѕРІ Р•РіРѕСЂ РђР»РµРєСЃРµРµРІРёС‡</h3>
+                        <p class="text-xs brand-pink font-semibold uppercase mb-2">Р‘РњРҐ (BMX) вЂў РўСЂСЋРєРѕРІРѕР№ СЃР°РјРѕРєР°С‚</p>
+                        <p class="text-neutral-400 text-xs">РџРµРґР°РіРѕРіРёС‡РµСЃРєРѕРµ РѕР±СЂР°Р·РѕРІР°РЅРёРµ. РђРјРїР»РёС‚СѓРґРЅС‹Рµ РІС‹Р»РµС‚С‹, С‡РёСЃС‚С‹Рµ РїСЂРёР·РµРјР»РµРЅРёСЏ Рё РїСЂРѕРіСЂРµСЃСЃ РІ РїР°СЂРєРѕРІС‹С… С‚СЂСЋРєР°С….</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0"><a href="#lead-form" class="w-full block text-center bg-neutral-800 hover:bg-neutral-700 text-xs font-bold py-2 rounded-xl border border-neutral-700">Р—Р°РїРёСЃР°С‚СЊСЃСЏ</a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Р РђРЎРџРРЎРђРќРР• -->
+    <section class="py-16 px-4 max-w-6xl mx-auto border-b border-neutral-800">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="text-xs font-extrabold text-[#ff007a] uppercase tracking-widest">Р“СЂР°С„РёРє СЂР°Р±РѕС‚С‹</span>
+            <h2 class="text-2xl sm:text-4xl font-black uppercase mt-1 mb-2">Р Р°СЃРїРёСЃР°РЅРёРµ С‚СЂРµРЅРёСЂРѕРІРѕРє</h2>
+            <p class="text-neutral-400 text-sm">Р“СЂСѓРїРїС‹ С„РѕСЂРјРёСЂСѓСЋС‚СЃСЏ РїРѕ РІРѕР·СЂР°СЃС‚Сѓ Рё РЅР°РІС‹РєР°Рј. Р—Р°РЅРёРјР°РµРјСЃСЏ РєСЂСѓРіР»С‹Р№ РіРѕРґ!</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto text-sm">
+            <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-6">
+                <h3 class="font-bold brand-pink uppercase mb-3">Р‘СѓРґРЅРёРµ РґРЅРё (РџРќ вЂ“ РџРў)</h3>
+                <div class="space-y-2 text-neutral-300">
+                    <div class="flex justify-between border-b border-neutral-800 pb-2"><span>10:00 вЂ“ 12:00</span><span class="text-neutral-400">Р‘РµРіРѕРІРµР» СЃ 2 Р»РµС‚ / РРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рµ</span></div>
+                    <div class="flex justify-between border-b border-neutral-800 pb-2"><span>15:00 вЂ“ 17:00</span><span class="text-neutral-400">РўСЂСЋРєРѕРІРѕР№ СЃР°РјРѕРєР°С‚ & РЎРєРµР№С‚Р±РѕСЂРґ</span></div>
+                    <div class="flex justify-between border-b border-neutral-800 pb-2"><span>17:00 вЂ“ 19:00</span><span class="text-neutral-400">Р‘РњРҐ (BMX) & Р’РµР»РѕСЃРёРїРµРґ СЃ РЅСѓР»СЏ</span></div>
+                    <div class="flex justify-between"><span>19:00 вЂ“ 21:00</span><span class="text-neutral-400">РЎРІРѕР±РѕРґРЅРѕРµ РєР°С‚Р°РЅРёРµ / РђСЂРµРЅРґР° Р·Р°Р»Р°</span></div>
+                </div>
+            </div>
+            <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-6">
+                <h3 class="font-bold brand-pink uppercase mb-3">Р’С‹С…РѕРґРЅС‹Рµ РґРЅРё (РЎР‘ вЂ“ Р’РЎ)</h3>
+                <div class="space-y-2 text-neutral-300">
+                    <div class="flex justify-between border-b border-neutral-800 pb-2"><span>10:00 вЂ“ 13:00</span><span class="text-neutral-400">Р‘РµРіРѕРІРµР»-РєР»СѓР± РѕС‚ 2 Р»РµС‚ & Р РѕР»РёРєРё</span></div>
+                    <div class="flex justify-between border-b border-neutral-800 pb-2"><span>13:00 вЂ“ 16:00</span><span class="text-neutral-400">РРЅС‚РµРЅСЃРёРІС‹ Р‘РњРҐ Рё РЎР°РјРѕРєР°С‚</span></div>
+                    <div class="flex justify-between border-b border-neutral-800 pb-2"><span>16:00 вЂ“ 18:00</span><span class="text-neutral-400">Р’РµР»РѕСЃРёРїРµРґ СЃ РЅСѓР»СЏ Р·Р° 1 СѓСЂРѕРє</span></div>
+                    <div class="flex justify-between"><span>18:00 вЂ“ 22:00</span><span class="text-neutral-400">РЎРІРѕР±РѕРґРЅС‹Рµ Р·Р°РµР·РґС‹ / РџСЂР°Р·РґРЅРёРєРё</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Р’РЎР• Р¦Р•РќР« -->
+    <section class="py-16 px-4 max-w-6xl mx-auto border-b border-neutral-800">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="text-xs font-extrabold text-[#ff007a] uppercase tracking-widest">РџСЂР°Р№СЃ-Р»РёСЃС‚</span>
+            <h2 class="text-2xl sm:text-4xl font-black uppercase mt-1 mb-2">РЎС‚РѕРёРјРѕСЃС‚СЊ Р·Р°РЅСЏС‚РёР№</h2>
+            <div class="bg-neutral-900 border border-pink-900/40 text-pink-300 text-xs p-3 rounded-xl mt-3 inline-block">
+                рџ’Ў <strong>РќР° РІСЃРµС… С‚СЂРµРЅРёСЂРѕРІРєР°С… СЃ РЅР°СЃС‚Р°РІРЅРёРєРѕРј СЌРєРёРїРёСЂРѕРІРєР° Рё С‚СЂР°РЅСЃРїРѕСЂС‚ Р‘Р•РЎРџР›РђРўРќР«!</strong> РђСЂРµРЅРґР° РїР»Р°С‚РЅР°СЏ С‚РѕР»СЊРєРѕ РґР»СЏ СЃРІРѕР±РѕРґРЅРѕРіРѕ РєР°С‚Р°РЅРёСЏ.
+            </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+            <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold uppercase text-sm mb-1">Р“СЂСѓРїРїРѕРІС‹Рµ С‚СЂРµРЅРёСЂРѕРІРєРё</h3>
+                    <div class="text-2xl font-black mb-2">РѕС‚ 600 в‚Ѕ</div>
+                    <p class="text-xs text-neutral-400 leading-relaxed mb-4">вЂў Р Р°Р·РѕРІРѕРµ: 800 в‚Ѕ<br>вЂў РђР±РѕРЅРµРјРµРЅС‚ 4 СѓСЂ.: 2800 в‚Ѕ<br>вЂў РђР±РѕРЅРµРјРµРЅС‚ 8 СѓСЂ.: 4800 в‚Ѕ</p>
+                </div>
+                <a href="#lead-form" class="text-center bg-neutral-800 hover:bg-neutral-700 text-xs font-bold py-2 rounded-xl border border-neutral-700">Р’С‹Р±СЂР°С‚СЊ</a>
+            </div>
+            <div class="bg-neutral-900 border border-pink-500 rounded-2xl p-6 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold uppercase text-sm mb-1">РРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рµ</h3>
+                    <div class="text-2xl font-black brand-pink mb-2">РѕС‚ 1 200 в‚Ѕ</div>
+                    <p class="text-xs text-neutral-300 leading-relaxed mb-4">вЂў 1 С‚СЂРµРЅРµСЂ = 1 СѓС‡РµРЅРёРє<br>вЂў Р’РµР»РѕСЃРёРїРµРґ Р·Р° 1вЂ“2 СѓСЂРѕРєР°<br>вЂў РўСЂСЋРєРѕРІР°СЏ Р±Р°Р·Р° СЃ РЅСѓР»СЏ</p>
+                </div>
+                <a href="#lead-form" class="text-center bg-brand-pink hover:bg-pink-600 text-white text-xs font-bold py-2 rounded-xl">Р—Р°РїРёСЃР°С‚СЊСЃСЏ</a>
+            </div>
+            <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold uppercase text-sm mb-1">РЎРІРѕР±РѕРґРЅРѕРµ РєР°С‚Р°РЅРёРµ</h3>
+                    <div class="text-2xl font-black mb-2">РѕС‚ 350 в‚Ѕ</div>
+                    <p class="text-xs text-neutral-400 leading-relaxed mb-4">вЂў Р’С…РѕРґ: 350 в‚Ѕ<br>вЂў РђСЂРµРЅРґР° Р‘РњРҐ/СЃР°РјРѕРєР°С‚Р°: 250 в‚Ѕ/С‡<br>вЂў РђСЂРµРЅРґР° С€Р»РµРјР°: 100 в‚Ѕ/С‡</p>
+                </div>
+                <a href="#lead-form" class="text-center bg-neutral-800 hover:bg-neutral-700 text-xs font-bold py-2 rounded-xl border border-neutral-700">РЈР·РЅР°С‚СЊ РІСЂРµРјСЏ</a>
+            </div>
+            <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold uppercase text-sm mb-1">РђСЂРµРЅРґР° РїР°СЂРєР°</h3>
+                    <div class="text-2xl font-black mb-2">РѕС‚ 2 500 в‚Ѕ/С‡</div>
+                    <p class="text-xs text-neutral-400 leading-relaxed mb-4">вЂў Р—Р°РєСЂС‹С‚РёРµ Р·Р°Р»Р° РїРѕРґ РїСЂР°Р·РґРЅРёРє<br>вЂў Р”РЅРё СЂРѕР¶РґРµРЅРёСЏ Рё РєРѕРјРїР°РЅРёРё<br>вЂў Р—РѕРЅР° С‡Р°РµРїРёС‚РёСЏ РґР»СЏ РіРѕСЃС‚РµР№</p>
+                </div>
+                <a href="#lead-form" class="text-center bg-neutral-800 hover:bg-neutral-700 text-xs font-bold py-2 rounded-xl border border-neutral-700">Р—Р°Р±СЂРѕРЅРёСЂРѕРІР°С‚СЊ</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. РЎРўРђРўР¬Р Р РЎРћР’Р•РўР« -->
+    <section class="py-16 px-4 max-w-6xl mx-auto border-b border-neutral-800">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="text-xs font-extrabold text-[#ff007a] uppercase tracking-widest">Р‘Р°Р·Р° Р·РЅР°РЅРёР№</span>
+            <h2 class="text-2xl sm:text-4xl font-black uppercase mt-1 mb-2">РЎРѕРІРµС‚С‹ СЂРѕРґРёС‚РµР»СЏРј</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+            <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-6">
+                <span class="text-[11px] font-bold text-pink-400 uppercase">РЎ 2 Р»РµС‚</span>
+                <h3 class="font-bold text-base my-2">РџРѕС‡РµРјСѓ Р±РµРіРѕРІРµР» Р»СѓС‡С€Рµ С‚СЂРµС…РєРѕР»РµСЃРЅРѕРіРѕ Р±Р°Р№РєР°?</h3>
+                <p class="text-neutral-400 text-xs leading-relaxed mb-4">Р‘РµРіРѕРІРµР» С‚СЂРµРЅРёСЂСѓРµС‚ РІРµСЃС‚РёР±СѓР»СЏСЂРЅС‹Р№ Р°РїРїР°СЂР°С‚. РџРѕСЃР»Рµ РЅРµРіРѕ СЂРµР±РµРЅРѕРє СЃР°РґРёС‚СЃСЏ РЅР° 2-РєРѕР»РµСЃРЅС‹Р№ РІРµР»РѕСЃРёРїРµРґ Р±РµР· СЃС‚СЂР°С…РѕРІРѕС‡РЅС‹С… РєРѕР»РµСЃ Р·Р° 30 РјРёРЅСѓС‚.</p>
+                <a href="https://vk.ru/centrschool63" target="_blank" class="text-xs brand-pink underline">Р§РёС‚Р°С‚СЊ РІ Р’Рљ в†’</a>
+            </div>
+            <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-6">
+                <span class="text-[11px] font-bold text-pink-400 uppercase">Р‘РµР·РѕРїР°СЃРЅРѕСЃС‚СЊ</span>
+                <h3 class="font-bold text-base my-2">РЁР»РµРј СЃ Р·Р°С‰РёС‚РѕР№ С‡РµР»СЋСЃС‚Рё (Full-Face)</h3>
+                <p class="text-neutral-400 text-xs leading-relaxed mb-4">РџСЂРё РїР°РґРµРЅРёСЏС… РІРїРµСЂРµРґ С‡РµСЂРµР· СЂСѓР»СЊ РѕР±С‹С‡РЅС‹Р№ РІРµР»РѕС€Р»РµРј РЅРµ Р·Р°С‰РёС‰Р°РµС‚ Р»РёС†Рѕ Рё Р·СѓР±С‹. Р—Р°РєСЂС‹С‚С‹Р№ С€Р»РµРј РѕР±РµСЃРїРµС‡РёРІР°РµС‚ РїРѕР»РЅСѓСЋ РєСЂСѓРіРѕРІСѓСЋ Р·Р°С‰РёС‚Сѓ РіРѕР»РѕРІС‹.</p>
+                <a href="https://vk.ru/centrschool63" target="_blank" class="text-xs brand-pink underline">Р§РёС‚Р°С‚СЊ РІ Р’Рљ в†’</a>
+            </div>
+            <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-6">
+                <span class="text-[11px] font-bold text-pink-400 uppercase">РџРѕРґР±РѕСЂ</span>
+                <h3 class="font-bold text-base my-2">Р Р°Р·РјРµСЂ Р‘РњРҐ: 16 РёР»Рё 18 РґСЋР№РјРѕРІ?</h3>
+                <p class="text-neutral-400 text-xs leading-relaxed mb-4">16 РґСЋР№РјРѕРІ РёРґРµР°Р»РµРЅ РґР»СЏ СЂРѕСЃС‚Р° 110вЂ“130 СЃРј, 18 РґСЋР№РјРѕРІ вЂ” РґР»СЏ 125вЂ“145 СЃРј. РџРѕРєСѓРїРєР° В«РЅР° РІС‹СЂРѕСЃС‚В» РјРµС€Р°РµС‚ СѓС‡РёС‚СЊСЃСЏ С‚СЂСЋРєР°Рј Рё РїСЂРёРІРѕРґРёС‚ Рє С‚СЂР°РІРјР°Рј.</p>
+                <a href="https://vk.ru/centrschool63" target="_blank" class="text-xs brand-pink underline">Р§РёС‚Р°С‚СЊ РІ Р’Рљ в†’</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. РљРђР РўРћР§РљР РўРћР’РђР РћР’ Р’ РќРђР›РР§РР -->
+    <section class="py-16 px-4 max-w-6xl mx-auto border-b border-neutral-800">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="text-xs font-extrabold text-[#ff007a] uppercase tracking-widest">РњР°РіР°Р·РёРЅ РІ РўРѕР»СЊСЏС‚С‚Рё</span>
+            <h2 class="text-2xl sm:text-4xl font-black uppercase mt-1 mb-2">Р­РєРёРїРёСЂРѕРІРєР° Рё Р±Р°Р№РєРё РІ РЅР°Р»РёС‡РёРё</h2>
+            <p class="text-neutral-400 text-sm">РџСЂРёРјРµСЂРєР° Рё РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅР°СЏ РЅР°СЃС‚СЂРѕР№РєР° С‚СЂРµРЅРµСЂР°РјРё РІ Р·Р°Р»Рµ (Р®Р¶РЅРѕРµ С€РѕСЃСЃРµ, 5)</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div class="bg-neutral-900 border border-neutral-800 rounded-3xl p-6 flex flex-col justify-between">
+                <div>
+                    <span class="text-xs font-bold brand-pink uppercase">Р—Р°С‰РёС‚Р° Р»РёС†Р° Рё С‡РµР»СЋСЃС‚Рё</span>
+                    <h3 class="text-xl font-bold mt-1 mb-2">РЁР»РµРј РўРµРє РўРёРј Р¤СѓР»Р»-Р¤РµР№СЃ (Tech Team Full-Face)</h3>
+                    <p class="text-neutral-400 text-xs leading-relaxed mb-4">Р›РµРіРєРёР№ СѓРґР°СЂРѕРїСЂРѕС‡РЅС‹Р№ РїРѕР»РёРјРµСЂРЅС‹Р№ РєР°СЂРєР°СЃ, СЃСЉРµРјРЅС‹Р№ РєРѕР·С‹СЂРµРє, РіР»СѓР±РѕРєР°СЏ РїРѕСЃР°РґРєР° Рё РєР°РЅР°Р»С‹ РІРµРЅС‚РёР»СЏС†РёРё. Р Р°Р·РјРµСЂС‹ РІ РЅР°Р»РёС‡РёРё РїРѕРґ Р»СЋР±РѕР№ РІРѕР·СЂР°СЃС‚.</p>
+                    <div class="text-[11px] text-neutral-400 bg-neutral-950 p-3 rounded-xl mb-4 border border-neutral-800 space-y-1">
+                        <p>вЂў РќР°Р·РЅР°С‡РµРЅРёРµ: Р·Р°С‰РёС‚Р° РїСЂРё РєР°С‚Р°РЅРёРё РЅР° BMX, СЃР°РјРѕРєР°С‚Рµ, СЃ СЂРѕР»РёРєРѕРІ</p>
+                        <p>вЂў <a href="offer.html" target="_blank" class="text-pink-400 underline">РџСЂР°РІРёР»Р° РІРѕР·РІСЂР°С‚Р° Рё РіР°СЂР°РЅС‚РёРё РІ РѕС„РµСЂС‚Рµ</a></p>
+                    </div>
+                </div>
+                <div class="pt-4 border-t border-neutral-800 flex justify-between items-center">
+                    <span class="text-2xl font-black text-white">6 000 в‚Ѕ</span>
+                    <a href="#lead-form" class="bg-brand-pink hover:bg-pink-600 text-white text-xs font-bold py-2.5 px-4 rounded-xl">Р—Р°Р±СЂРѕРЅРёСЂРѕРІР°С‚СЊ</a>
+                </div>
+            </div>
+
+            <div class="bg-neutral-900 border border-neutral-800 rounded-3xl p-6 flex flex-col justify-between">
+                <div>
+                    <span class="text-xs font-bold brand-pink uppercase">РљРѕР»РµСЃР° 16 Рё 18 РґСЋР№РјРѕРІ</span>
+                    <h3 class="text-xl font-bold mt-1 mb-2">Р’РµР»РѕСЃРёРїРµРґ Р‘РњРҐ Р’РЃР Рў (BMX VРЃRT 16" / 18")</h3>
+                    <p class="text-neutral-400 text-xs leading-relaxed mb-4">РЎРїРµС†РёР°Р»РёР·РёСЂРѕРІР°РЅРЅР°СЏ С‚СЂСЋРєРѕРІР°СЏ РіРµРѕРјРµС‚СЂРёСЏ РґР»СЏ РґРµС‚РµР№ Рё РїРѕРґСЂРѕСЃС‚РєРѕРІ. РџСЂРѕС‡РЅС‹Рµ РІС‚СѓР»РєРё Рё С€РёСЂРѕРєРёРµ РїРѕРєСЂС‹С€РєРё. Р‘РµСЃРїР»Р°С‚РЅР°СЏ РЅР°СЃС‚СЂРѕР№РєР° С‚СЂРµРЅРµСЂРѕРј РїРµСЂРµРґ РІС‹РєР°С‚РѕРј.</p>
+                    <div class="text-[11px] text-neutral-400 bg-neutral-950 p-3 rounded-xl mb-4 border border-neutral-800 space-y-1">
+                        <p>вЂў РџРѕРґР±РѕСЂ РїРѕРґ СЂРѕСЃС‚: 16" (110-130 СЃРј), 18" (125-145 СЃРј)</p>
+                        <p>вЂў <a href="offer.html" target="_blank" class="text-pink-400 underline">РџСЂР°РІРёР»Р° РІРѕР·РІСЂР°С‚Р° Рё РіР°СЂР°РЅС‚РёРё РІ РѕС„РµСЂС‚Рµ</a></p>
+                    </div>
+                </div>
+                <div class="pt-4 border-t border-neutral-800 flex justify-between items-center">
+                    <span class="text-2xl font-black text-white">30 000 в‚Ѕ</span>
+                    <a href="#lead-form" class="bg-brand-pink hover:bg-pink-600 text-white text-xs font-bold py-2.5 px-4 rounded-xl">Р—Р°Р±СЂРѕРЅРёСЂРѕРІР°С‚СЊ</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Р¤РћР РњРђ Р—РђРЇР’РљР РЎ Р§Р•РљР‘РћРљРЎРђРњР (152-Р¤Р— Р РћР¤Р•Р РўРђ) -->
+    <section id="lead-form" class="py-16 px-4 bg-neutral-900/30">
+        <div class="max-w-lg mx-auto bg-neutral-900 border border-neutral-800 rounded-3xl p-6 sm:p-10 shadow-2xl">
+            <h2 class="text-2xl font-black text-center uppercase tracking-tight mb-2">Р—Р°РїРёСЃСЊ РЅР° С‚СЂРµРЅРёСЂРѕРІРєСѓ</h2>
+            <p class="text-neutral-400 text-center text-xs mb-6">РћСЃС‚Р°РІСЊС‚Рµ РёРјСЏ Рё РЅРѕРјРµСЂ С‚РµР»РµС„РѕРЅР° РґР»СЏ СЃРІСЏР·Рё СЃ РіР»Р°РІРЅС‹Рј С‚СЂРµРЅРµСЂРѕРј</p>
+
+            <form id="bookingForm" onsubmit="sendBooking(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs uppercase font-bold text-neutral-400 mb-1">Р’Р°С€Рµ РёРјСЏ</label>
+                    <input type="text" id="clientName" required placeholder="РќР°РїСЂРёРјРµСЂ, Р”Р°СЂСЊСЏ" class="w-full bg-neutral-950 border border-neutral-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-[#ff007a]">
+                </div>
+                <div>
+                    <label class="block text-xs uppercase font-bold text-neutral-400 mb-1">РќРѕРјРµСЂ С‚РµР»РµС„РѕРЅР°</label>
+                    <input type="tel" id="clientPhone" required placeholder="+7 (999) 000-00-00" class="w-full bg-neutral-950 border border-neutral-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-[#ff007a]">
+                </div>
+                <div>
+                    <label class="block text-xs uppercase font-bold text-neutral-400 mb-1">РќР°РїСЂР°РІР»РµРЅРёРµ РёР»Рё РІРѕРїСЂРѕСЃ</label>
+                    <select id="clientDirection" class="w-full bg-neutral-950 border border-neutral-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-[#ff007a]">
+                        <option value="Р‘РµРіРѕРІРµР» (СЃ 2 Р»РµС‚)">Р‘РµРіРѕРІРµР» (СЃ 2 Р»РµС‚)</option>
+                        <option value="Р’РµР»РѕСЃРёРїРµРґ СЃ РЅСѓР»СЏ">Р’РµР»РѕСЃРёРїРµРґ СЃ РЅСѓР»СЏ (Р·Р° 1-2 Р·Р°РЅСЏС‚РёСЏ)</option>
+                        <option value="Р‘РњРҐ С„СЂРёСЃС‚Р°Р№Р»">РўСЂСЋРєРѕРІРѕР№ РІРµР»РѕСЃРёРїРµРґ Р‘РњРҐ (BMX Freestyle)</option>
+                        <option value="РўСЂСЋРєРѕРІРѕР№ СЃР°РјРѕРєР°С‚">РўСЂСЋРєРѕРІРѕР№ СЃР°РјРѕРєР°С‚</option>
+                        <option value="РЎРєРµР№С‚Р±РѕСЂРґ">РЎРєРµР№С‚Р±РѕСЂРґ</option>
+                        <option value="Р РѕР»РёРєРё">Р РѕР»РёРєРё</option>
+                        <option value="РљСѓРїРёС‚СЊ С€Р»РµРј РўРµРє РўРёРј (6000СЂ)">РљСѓРїРёС‚СЊ С€Р»РµРј РўРµРє РўРёРј (6 000 в‚Ѕ)</option>
+                        <option value="РљСѓРїРёС‚СЊ Р‘РњРҐ Р’РЃР Рў (30000СЂ)">РљСѓРїРёС‚СЊ Р‘РњРҐ Р’РЃР Рў 16 РёР»Рё 18 РґСЋР№РјРѕРІ (30 000 в‚Ѕ)</option>
+                        <option value="РђСЂРµРЅРґР° РїР°СЂРєР°">РђСЂРµРЅРґР° РїР°СЂРєР° РґР»СЏ РїСЂР°Р·РґРЅРёРєР°</option>
+                    </select>
+                </div>
+
+                <!-- Р§Р•РљР‘РћРљРЎР« РЎРћР“Р›РђРЎРРЇ -->
+                <div class="space-y-2 pt-2 text-left">
+                    <div class="flex items-start gap-2.5">
+                        <input type="checkbox" id="policyCheck" required class="mt-1 h-4 w-4 rounded accent-[#ff007a] cursor-pointer">
+                        <label for="policyCheck" class="text-xs text-neutral-400 leading-snug cursor-pointer">
+                            РЇ РґР°СЋ СЃРѕРіР»Р°СЃРёРµ РЅР° РѕР±СЂР°Р±РѕС‚РєСѓ РїРµСЂСЃРѕРЅР°Р»СЊРЅС‹С… РґР°РЅРЅС‹С… (<a href="policy.html" target="_blank" class="text-[#ff007a] underline">РџРѕР»РёС‚РёРєР°</a>)
+                        </label>
+                    </div>
+                    <div class="flex items-start gap-2.5">
+                        <input type="checkbox" id="offerCheck" required class="mt-1 h-4 w-4 rounded accent-[#ff007a] cursor-pointer">
+                        <label for="offerCheck" class="text-xs text-neutral-400 leading-snug cursor-pointer">
+                            РЇ РїСЂРёРЅРёРјР°СЋ СѓСЃР»РѕРІРёСЏ <a href="offer.html" target="_blank" class="text-[#ff007a] underline">РџСѓР±Р»РёС‡РЅРѕР№ РѕС„РµСЂС‚С‹</a> Рё РїСЂР°РІРёР»Р° С€РєРѕР»С‹
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full bg-brand-pink hover:bg-pink-600 text-white font-extrabold py-3.5 rounded-xl text-base transition">
+                    РћС‚РїСЂР°РІРёС‚СЊ Р·Р°СЏРІРєСѓ
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- РџРћР”Р’РђР› (Р¤РЈРўР•Р ) РЎ Р Р•РљР’РР—РРўРђРњР Р РћРџР›РђРўРћР™ -->
+    <footer class="border-t border-neutral-800 py-10 px-4 text-center text-xs text-neutral-400 bg-neutral-950">
+        <div class="max-w-4xl mx-auto space-y-4">
+            <p class="font-bold text-white text-base">Р’РµР»РѕС€РєРѕР»Р° Рё СЌРєСЃС‚СЂРёРј-РїР°СЂРє В«Р¦Р•РќРўР В»</p>
+            <p>Рі. РўРѕР»СЊСЏС‚С‚Рё, Р®Р¶РЅРѕРµ С€РѕСЃСЃРµ, 5, 2 СЌС‚Р°Р¶ вЂў РўРµР»: <a href="tel:+79370609029" class="text-white hover:underline">+7 (937) 060-90-29</a></p>
+            <p>РЎРѕРѕР±С‰РµСЃС‚РІРѕ Р’РљРѕРЅС‚Р°РєС‚Рµ: <a href="https://vk.ru/centrschool63" target="_blank" class="text-pink-400 hover:underline">vk.ru/centrschool63</a></p>
+
+            <div class="pt-3 border-t border-neutral-900 flex flex-wrap justify-center items-center gap-3 text-neutral-300 font-semibold text-xs">
+                <span class="text-neutral-500 uppercase text-[11px]">РћРїР»Р°С‚Р°:</span>
+                <span class="px-2 py-0.5 bg-neutral-900 border border-neutral-800 rounded">РљР°СЂС‚Р° РњРР </span>
+                <span class="px-2 py-0.5 bg-neutral-900 border border-neutral-800 rounded">РЎР‘Рџ РїРѕ QR-РєРѕРґСѓ</span>
+                <span class="px-2 py-0.5 bg-neutral-900 border border-neutral-800 rounded">Рў-Р‘Р°РЅРє / РЎР±РµСЂР±Р°РЅРє</span>
+                <span class="px-2 py-0.5 bg-neutral-900 border border-neutral-800 rounded">РќР°Р»РёС‡РЅС‹Рµ</span>
+            </div>
+
+            <div class="pt-3 border-t border-neutral-900 flex justify-center gap-4 text-neutral-400">
+                <a href="policy.html" target="_blank" class="hover:text-white underline">РџРѕР»РёС‚РёРєР° РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё</a>
+                <span>вЂў</span>
+                <a href="offer.html" target="_blank" class="hover:text-white underline">РџСѓР±Р»РёС‡РЅР°СЏ РѕС„РµСЂС‚Р°</a>
+            </div>
+
+            <div class="text-[11px] text-neutral-500">
+                <p>РРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Р№ РїСЂРµРґРїСЂРёРЅРёРјР°С‚РµР»СЊ РњР°Р»СЏРµРІР° Р”. Рђ. вЂў РћР“Р РќРРџ: РҐРҐРҐРҐРҐРҐРҐРҐРҐРҐРҐРҐРҐРҐРҐ вЂў РРќРќ: РҐРҐРҐРҐРҐРҐРҐРҐРҐРҐРҐРҐ</p>
+                <p>В© 2026 Р’РµР»РѕС€РєРѕР»Р° Р¦Р•РќРўР  РІ РўРѕР»СЊСЏС‚С‚Рё. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- РЎРљР РРџРўР« -->
+    <script>
+    function sendBooking(e) {
+        e.preventDefault();
+        const name = document.getElementById('clientName').value;
+        const phone = document.getElementById('clientPhone').value;
+        const direction = document.getElementById('clientDirection').value;
+        const message = `Р—РґСЂР°РІСЃС‚РІСѓР№С‚Рµ! Р—Р°СЏРІРєР° СЃ СЃР°Р№С‚Р° Р’РµР»РѕС€РєРѕР»С‹:%0AРРјСЏ: ${encodeURIComponent(name)}%0AРўРµР»РµС„РѕРЅ: ${encodeURIComponent(phone)}%0AРРЅС‚РµСЂРµСЃСѓРµС‚: ${encodeURIComponent(direction)}`;
+        window.open(`https://vk.me/centrschool63?ref=site&ref_source=site&message=${message}`, '_blank');
+    }
+
+    function acceptCookies() {
+        document.getElementById('cookieBanner').style.display = 'none';
+        localStorage.setItem('cookiesAccepted', 'true');
+    }
+
+    if (localStorage.getItem('cookiesAccepted') === 'true') {
+        document.getElementById('cookieBanner').style.display = 'none';
+    }
+    </script>
+</body>
+</html>
